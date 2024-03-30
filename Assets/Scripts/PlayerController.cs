@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public GameObject TimeLeapVFX;
-    private Material material;
+    public Material material;
     private SpriteRenderer spriteRenderer;
     public Camera Maincamera;
+    private static Vector3 MainCameraPosition;
     private bool startTransition1 = false; 
     private bool startTransition2 = false; 
-
-    private float transitionTime  = 0;
+    private static bool usedTimeLeap = false;
+    private float transitionTime;
     public float duration = 1f; 
     private float t;
     public float t1;
@@ -20,9 +21,51 @@ public class PlayerController : MonoBehaviour
     public float t3;
     public float speed1;
     public float speed2;
+    private static bool setupTime = true;
     // Start is called before the first frame update
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        // transitionTime = 0;
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("Player");
+        if (objs.Length > 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // PlayerMovement.moveable = true;
+        TimeLeapVFX = GameObject.FindGameObjectWithTag("TimeLeapVFX");
+        Maincamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        transitionTime = 0;
+        material = TimeLeapVFX.GetComponent<SpriteRenderer>().material;
+        spriteRenderer = TimeLeapVFX.GetComponent<SpriteRenderer>();
+        if (usedTimeLeap)
+        {
+           // Start Distortion when jump to the new scene
+        startTransition2 = true;
+        Vector3 position = MainCameraPosition;
+        print(position);
+        position.z = 0;
+        TimeLeapVFX.transform.position = position;
+        // TimeLeapVFX.GetComponent<SpriteRenderer>().color = Color.black;
+        TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true; 
+        }
+        
+    }
     void Start()
     {
+        // TimeLeapVFX = GameObject.FindGameObjectWithTag("TimeLeapVFX");
+        // Maincamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        transitionTime = 0;
         material = TimeLeapVFX.GetComponent<SpriteRenderer>().material;
         spriteRenderer = TimeLeapVFX.GetComponent<SpriteRenderer>();
     }
@@ -30,23 +73,31 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F) && setupTime)
         {   
-            
+            setupTime = false;
+            transitionTime = 0;
+            GetComponent<Animator>().SetInteger("direction", 3);
+            PlayerMovement.moveable = false;
+            usedTimeLeap = true;
             startTransition1 = true;
             Vector3 position = Maincamera.transform.position;
+            MainCameraPosition = position;
             position.z = 0;
             TimeLeapVFX.transform.position = position;
-            TimeLeapVFX.SetActive(true);
-            // StartCoroutine(TimeLeap());
-            
+            TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(SwitchScene());
+            // transitionTime = 0;
         }
+
         if (startTransition1){
             transitionTime += Time.deltaTime;
             float lerpFactor = transitionTime / duration;
-            Color newColor = Color.Lerp(Color.white, Color.black, lerpFactor);
-            float a = 1;
-            a = Mathf.Lerp(1, 20, lerpFactor);
+            float nonlinearFactor = lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor;
+            print(lerpFactor);
+            Color newColor = Color.Lerp(Color.white, Color.black, lerpFactor * lerpFactor);
+            // float a = 1;
+            float a = Mathf.Lerp(1, 20, nonlinearFactor);
             material.SetFloat("_a", a);
             TimeLeapVFX.GetComponent<SpriteRenderer>().color = newColor;
 
@@ -54,7 +105,28 @@ public class PlayerController : MonoBehaviour
             if (lerpFactor >= 1.0f)
             {
                 startTransition1 = false;
+                material.SetFloat("_a", 1);
+            }
+        }
 
+        if (startTransition2 && usedTimeLeap){
+            PlayerMovement.moveable = false;
+            StartCoroutine(Waiting());
+            transitionTime += Time.deltaTime;
+            float lerpFactor = transitionTime / duration;
+            float nonlinearFactor = lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor;
+
+            Color newColor = Color.Lerp(Color.black, Color.white, lerpFactor * lerpFactor);
+            // float a = 1;
+            float a = Mathf.Lerp(-20, 1, nonlinearFactor);
+            material.SetFloat("_a", a);
+            TimeLeapVFX.GetComponent<SpriteRenderer>().color = newColor;
+
+        
+            if (lerpFactor >= 1.0f)
+            {
+                startTransition2 = false;
+                TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
 
@@ -91,21 +163,25 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private IEnumerator TimeLeap()
+    private IEnumerator SwitchScene()
     {
-        
-        float a = 1;
-        t = Time.time;
-        a = Mathf.Lerp(1, 20, t / 200f);
-        material.SetFloat("_a", a);
-        yield return null;
+        yield return new WaitForSeconds(2);
 
-        // t = 0;
-        // while (t < t1)
-        // {
-            
-        //     material.SetFloat("_a", a);
-        //     yield return null;
-        // }
+        if(SceneManager.GetActiveScene().name == "PastLab")
+        {
+            SceneManager.LoadScene("PresentLab");
+            setupTime = true;
+        }
+        else if(SceneManager.GetActiveScene().name == "PresentLab")
+        {
+            SceneManager.LoadScene("PastLab");
+            setupTime = true;
+        }
+        // yield return null;
+    }
+
+    private IEnumerator Waiting(){
+        yield return new WaitForSeconds(2);
+        PlayerMovement.moveable = true;
     }
 }

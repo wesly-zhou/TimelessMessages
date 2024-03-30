@@ -10,6 +10,9 @@ public class CameraMoveBounded : MonoBehaviour {
        public Vector2 maxPosition; // X and Y values for upper right corner
        public AnimationCurve curve;
 
+       void Start () {
+              target = GameObject.FindGameObjectWithTag("Player").transform;
+       }
        void Update () {
               
               if (transform.position != target.position){

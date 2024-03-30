@@ -363,9 +363,10 @@ GameObject:
   - component: {fileID: 630816497}
   - component: {fileID: 630816496}
   - component: {fileID: 630816498}
+  - component: {fileID: 630816499}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -411,7 +412,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 753e8dbd6afbb184485efc52a28d7960, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f8671b8ff7084974fbc17930a54e94a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -431,7 +432,7 @@ Transform:
   m_GameObject: {fileID: 630816493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.7, y: -3.05, z: -0.015182258}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -449,7 +450,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72f280bcb1b4dce438d99874db98a5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4
+  forward: {fileID: 21300000, guid: f8671b8ff7084974fbc17930a54e94a5, type: 3}
+  back: {fileID: 21300000, guid: e171a2b3fcb9b754a9157ff0f1eb4432, type: 3}
+  right: {fileID: 21300000, guid: 2c3bf66fac7bee04995d2ee56a1c1cdb, type: 3}
   walkSound: {fileID: 0}
 --- !u!50 &630816497
 Rigidbody2D:
@@ -491,6 +495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeLeapVFX: {fileID: 896719327}
+  material: {fileID: 0}
   Maincamera: {fileID: 77182186}
   duration: 2
   t1: 0
@@ -498,6 +503,27 @@ MonoBehaviour:
   t3: 0
   speed1: 0
   speed2: 0
+--- !u!95 &630816499
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630816493}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c457d456d62ead04397d0bbbcbb47cb4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &633186384
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,11 +724,11 @@ GameObject:
   - component: {fileID: 896719330}
   m_Layer: 6
   m_Name: TimeLeapVFX
-  m_TagString: Untagged
+  m_TagString: TimeLeapVFX
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &896719328
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -710,7 +736,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896719327}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
