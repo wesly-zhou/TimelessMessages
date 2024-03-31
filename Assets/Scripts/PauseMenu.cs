@@ -13,16 +13,16 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(false);
         isPaused = false;
     }
+    
+    public void Pause() {
+        pausePanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
 
-    public void PauseResume() {
-        if (isPaused) {
-            pausePanel.SetActive(false);
-            Time.timeScale = 1f;
-        }
-        else {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0f;
-        }
-        isPaused = !isPaused;
+    public void Resume() {
+        pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
     }
 }
