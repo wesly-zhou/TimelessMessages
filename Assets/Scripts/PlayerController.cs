@@ -136,7 +136,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    /*
     private void TimeTravel()
     {
         if (setupTime)
@@ -230,7 +229,7 @@ public class PlayerController : MonoBehaviour
 
         //     }
         // }
-    */
+    }
 
     private IEnumerator SwitchScene()
     {

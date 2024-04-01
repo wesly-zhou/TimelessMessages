@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameHandler : MonoBehaviour
 {
     public void StartGame() {
-        SceneManager.LoadScene("Intro");
+        SceneManager.LoadScene("PastLab");
     }
 
     public void Main() {
