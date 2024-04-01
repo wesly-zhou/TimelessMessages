@@ -71,6 +71,28 @@ public class PlayerController : MonoBehaviour
         material = TimeLeapVFX.GetComponent<SpriteRenderer>().material;
         spriteRenderer = TimeLeapVFX.GetComponent<SpriteRenderer>();
     }
+    public void OnbuttonClick(){
+        if (setupTime)
+        {   
+            print("Start1: " + startTransition1);
+            print("Start2: " + startTransition2);
+        
+            setupTime = false;
+            transitionTime = 0;
+            GetComponent<Animator>().SetInteger("direction", 3);
+            PlayerMovement.moveable = false;
+            print("player moveable: " + PlayerMovement.moveable);
+            usedTimeLeap = true;
+            startTransition1 = true;
+            Vector3 position = Maincamera.transform.position;
+            MainCameraPosition = position;
+            position.z = 0;
+            TimeLeapVFX.transform.position = position;
+            TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(SwitchScene());
+            // transitionTime = 0;
+        }
+    }
     void Update() {
         if (Input.GetKeyDown(KeyCode.F) && setupTime)
         {   
@@ -132,6 +154,7 @@ public class PlayerController : MonoBehaviour
                 TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = false;
                 setupTime = true;
                 PlayerMovement.moveable = true;
+                print("now you can move");
             }
         }
     }
