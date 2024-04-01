@@ -71,12 +71,75 @@ public class PlayerController : MonoBehaviour
         material = TimeLeapVFX.GetComponent<SpriteRenderer>().material;
         spriteRenderer = TimeLeapVFX.GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
         if (Input.GetKeyDown(KeyCode.F) && setupTime)
+        {   
+            print("Start1: " + startTransition1);
+            print("Start2: " + startTransition2);
+        
+            setupTime = false;
+            transitionTime = 0;
+            GetComponent<Animator>().SetInteger("direction", 3);
+            PlayerMovement.moveable = false;
+            print("player moveable: " + PlayerMovement.moveable);
+            usedTimeLeap = true;
+            startTransition1 = true;
+            Vector3 position = Maincamera.transform.position;
+            MainCameraPosition = position;
+            position.z = 0;
+            TimeLeapVFX.transform.position = position;
+            TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(SwitchScene());
+            // transitionTime = 0;
+        }
+
+        if (startTransition1){
+            transitionTime += Time.deltaTime;
+            float lerpFactor = transitionTime / duration;
+            float nonlinearFactor = lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor * lerpFactor;
+            // print(lerpFactor);
+            Color newColor = Color.Lerp(Color.white, Color.black, lerpFactor * lerpFactor);
+            // float a = 1;
+            float a = Mathf.Lerp(1, 20, nonlinearFactor);
+            material.SetFloat("_a", a);
+            TimeLeapVFX.GetComponent<SpriteRenderer>().color = newColor;
+
+        
+            if (lerpFactor >= 1.0f)
+            {
+                startTransition1 = false;
+                material.SetFloat("_a", 1);
+            }
+        }
+
+        if (startTransition2 && usedTimeLeap){
+            PlayerMovement.moveable = false;
+            StartCoroutine(Waiting());
+            transitionTime += Time.deltaTime;
+            float lerpFactor = transitionTime / duration;
+            float nonlinearFactor = lerpFactor * lerpFactor  ;
+            float a = Mathf.Lerp(-20, 1, nonlinearFactor);
+            material.SetFloat("_a", a);
+            Color newColor = Color.Lerp(Color.black, Color.white, lerpFactor * lerpFactor * lerpFactor);
+            // float a = 1;
+            
+            TimeLeapVFX.GetComponent<SpriteRenderer>().color = newColor;
+
+        
+            if (lerpFactor >= 1.0f)
+            {
+                startTransition2 = false;
+                TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = false;
+                setupTime = true;
+                PlayerMovement.moveable = true;
+            }
+        }
+    }
+
+    /*
+    private void TimeTravel()
+    {
+        if (setupTime)
         {   
             print("Start1: " + startTransition1);
             print("Start2: " + startTransition2);
@@ -167,10 +230,7 @@ public class PlayerController : MonoBehaviour
 
         //     }
         // }
-
-
-
-    }
+    */
 
     private IEnumerator SwitchScene()
     {
