@@ -15,10 +15,9 @@ public class PlayerSideMovement : MonoBehaviour
 		// if input is moving player right and player faces left, turn, and vice-versa
 		if ((hMove.x < 0 && faceRight) || (hMove.x > 0 && !faceRight))
         {
-			// Turn();
+			Turn();
 		}
 	}
-/*
 	private void Turn()
 	{
 		// Switch player facing label
@@ -29,5 +28,4 @@ public class PlayerSideMovement : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-*/
 }

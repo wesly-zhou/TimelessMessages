@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorHandler : MonoBehaviour
 {
-    public string newLevel = "PuzzleOne";
+    public string newLevel = "MainMenu";
 
     public void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Player"){
