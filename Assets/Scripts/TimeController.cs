@@ -6,7 +6,7 @@ public class TimeController : MonoBehaviour
 {
     public GameObject pastMap;
     public GameObject presentMap;
-    public static bool isPresent = true; 
+    public static bool isPresent = true;
 
     void Start()
     {
@@ -20,7 +20,8 @@ public class TimeController : MonoBehaviour
         }
     }
 
-    public void TimeTravel() {
+    public void TimeTravel() 
+    {
         isPresent = !isPresent;
         if (isPresent) {
             presentMap.SetActive(true);
