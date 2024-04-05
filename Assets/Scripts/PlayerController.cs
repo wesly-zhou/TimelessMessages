@@ -258,14 +258,14 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
 
-        if(SceneManager.GetActiveScene().name == "PastLab")
+        if(SceneManager.GetActiveScene().name == "Lab")
         {
-            SceneManager.LoadScene("PresentLab");
+            SceneManager.LoadScene("TestLab");
             // setupTime = true;
         }
-        else if(SceneManager.GetActiveScene().name == "PresentLab")
+        else if(SceneManager.GetActiveScene().name == "TestLab")
         {
-            SceneManager.LoadScene("PastLab");
+            SceneManager.LoadScene("Lab");
             // setupTime = true;
         }
         // yield return null;

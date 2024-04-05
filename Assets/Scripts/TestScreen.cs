@@ -8,8 +8,8 @@ public class TestScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadSceneAsync("PastLab", LoadSceneMode.Additive);
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("SecurityRoom"));
+        SceneManager.LoadSceneAsync("Lab", LoadSceneMode.Additive);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("TestLab"));
     }
 
     // Update is called once per frame
