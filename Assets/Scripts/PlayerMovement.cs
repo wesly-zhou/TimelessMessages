@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     //You can adjust the speed in the Unity editor
     public float moveSpeed = 2f;
     private Rigidbody2D rb;
+    private Animator anim;
+    private SpriteRenderer spriteRend;
     private Vector2 movement;
     private bool faceRight = true;
     public Sprite forward;
@@ -14,14 +16,14 @@ public class PlayerMovement : MonoBehaviour
     public Sprite right;
 
     public static bool moveable = true;
-    public AudioClip walkSound;//sound effect
-    private AudioSource audioSource;
+    public AudioSource walkSound;//sound effect
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        audioSource = GetComponent<AudioSource>();//get sound
+        anim =  GetComponentInChildren<Animator>();
+        spriteRend = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -37,25 +39,26 @@ public class PlayerMovement : MonoBehaviour
         
         // Stop
         if (hvMove.x == 0 && hvMove.y == 0){
-            GetComponent<Animator>().SetInteger("direction", 3);
+            anim.SetInteger("direction", 3);
         }
         
         // Change walk status
         if (hvMove.y < 0){
-            GetComponent<Animator>().SetInteger("direction", 0);
-            gameObject.GetComponent<SpriteRenderer>().sprite = forward;
+            anim.SetInteger("direction", 0);
+            spriteRend.sprite = forward;
         } 
         if (hvMove.y > 0){
-            GetComponent<Animator>().SetInteger("direction", 1);
-            gameObject.GetComponent<SpriteRenderer>().sprite = back;
+            anim.SetInteger("direction", 1);
+            spriteRend.sprite = back;
         } 
         if (hvMove.x < 0 || hvMove.x > 0){
-            GetComponent<Animator>().SetInteger("direction", 2);
-            gameObject.GetComponent<SpriteRenderer>().sprite = right;
+            anim.SetInteger("direction", 2);
+            spriteRend.sprite = right;
             // Turn left or right
             if ((hvMove.x <0 && faceRight) || (hvMove.x >0 && !faceRight)){
-            // GetComponent<Animator>().SetInteger("direction", 2);
-            playerTurn();
+            // anim.SetInteger("direction", 2);
+            Debug.Log ("Time to turn!");
+                playerTurn();
             
             }
         }
@@ -63,16 +66,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") != 0 || Input.GetAxis("Vertical") != 0)
         {
             
-            if (!audioSource.isPlaying)
+            if (!walkSound.isPlaying)
             {
-                audioSource.clip = walkSound;
-                audioSource.Play();
+                //audioSource.clip = walkSound;
+                walkSound.Play();
             }
         }
         else
         {
             
-            audioSource.Stop(); // Stop the sound if the player is not moving
+            walkSound.Stop(); // Stop the sound if the player is not moving
         }
     }
 
@@ -90,13 +93,15 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(position);
     }
 
-    private void playerTurn()
+    public void playerTurn()
     {
         // NOTE: Switch player facing label
         faceRight = !faceRight;
+        Debug.Log("FaceRight = " + faceRight);
         // NOTE: Multiply player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        Vector3 theScale = gameObject.transform.localScale;
+        theScale.x = theScale.x * -1;
+        gameObject.transform.localScale = theScale;
+        Debug.Log("the Scale = " + theScale);
     }
 }
