@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
         
             setupTime = false;
             transitionTime = 0;
-            GetComponent<Animator>().SetInteger("direction", 3);
+            GetComponentInChildren<Animator>().SetInteger("direction", 3);
             PlayerMovement.moveable = false;
             print("player moveable: " + PlayerMovement.moveable);
             usedTimeLeap = true;
