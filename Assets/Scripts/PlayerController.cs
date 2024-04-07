@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
     }
 
     void OnDestroy()
@@ -60,6 +61,17 @@ public class PlayerController : MonoBehaviour
         TimeLeapVFX.transform.position = position;
         // TimeLeapVFX.GetComponent<SpriteRenderer>().color = Color.black;
         TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true; 
+        }
+        if(SceneManager.GetActiveScene().name == "ChemLab")
+        {
+            print("ChemLab");
+            gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+
+        if(SceneManager.GetActiveScene().name == "Lab")
+        {
+            print("Lab");
+            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1f);
         }
         
     }
@@ -260,10 +272,10 @@ public class PlayerController : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name == "Lab")
         {
-            SceneManager.LoadScene("TestLab");
+            SceneManager.LoadScene("ChemLab");
             // setupTime = true;
         }
-        else if(SceneManager.GetActiveScene().name == "TestLab")
+        else if(SceneManager.GetActiveScene().name == "ChemLab")
         {
             SceneManager.LoadScene("Lab");
             // setupTime = true;
