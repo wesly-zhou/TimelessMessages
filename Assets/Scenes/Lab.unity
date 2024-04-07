@@ -145,7 +145,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 452083595}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1c368ed44d44eb44afa889ce1d24e33, type: 3}
   m_Name: 
@@ -868,7 +868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6439070914862866436, guid: caca27eecc4d9c940809453b66ebe11a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TimeTravel
+      value: OnbuttonClick
       objectReference: {fileID: 0}
     - target: {fileID: 6439070914862866436, guid: caca27eecc4d9c940809453b66ebe11a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
