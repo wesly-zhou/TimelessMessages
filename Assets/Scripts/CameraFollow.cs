@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
       private GameObject target;
-      public float camSpeed = 4.0f;
+      public float camSpeed = 2.0f;
 
       void Start(){
             target = GameObject.FindWithTag("Player");

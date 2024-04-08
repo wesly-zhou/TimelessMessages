@@ -271,6 +271,7 @@ MonoBehaviour:
   - {fileID: 6191553812485906886}
   - {fileID: 7780992564174660339}
   - {fileID: 6963017857517510813}
+  itemSOs: []
 --- !u!1 &234272698520082498
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7640470737925839190}
+  - component: {fileID: 3404228978844460168}
   m_Layer: 0
   m_Name: GameHandlerCanvas
   m_TagString: Untagged
@@ -373,6 +375,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3404228978844460168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100111295722442103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8edfaa1f66d8c45a888e6880aadd35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectIndex: 0
 --- !u!1 &2934025646921977720
 GameObject:
   m_ObjectHideFlags: 0
@@ -3228,7 +3243,7 @@ PrefabInstance:
       objectReference: {fileID: 5216178514586840423}
     - target: {fileID: 461192210173891878, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: TimeTravel
+      value: OnbuttonClick
       objectReference: {fileID: 0}
     - target: {fileID: 461192210173891878, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

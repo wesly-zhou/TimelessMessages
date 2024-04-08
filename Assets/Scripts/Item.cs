@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    [SerializeField]
+    private string itemName;
+
     [TextArea]
     [SerializeField]
     private string itemDesc;
@@ -17,7 +20,7 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") 
         {
-            inventoryManager.AddItem(itemDesc, sprite);
+            inventoryManager.AddItem(itemName, itemDesc, sprite);
             Destroy(gameObject);
         }
     }

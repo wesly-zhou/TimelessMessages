@@ -139,11 +139,6 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 3864126938701631255, guid: 3926809c0c6c25245aa411238406a150, type: 3}
   m_PrefabInstance: {fileID: 9218430218868502483}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &452083595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6305904171940811870, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-  m_PrefabInstance: {fileID: 209836839862744765}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &467884113
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,22 +228,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
   m_PrefabInstance: {fileID: 209836839862744765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &630816502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 452083595}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1c368ed44d44eb44afa889ce1d24e33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeLeapVFX: {fileID: 896719327}
-  material: {fileID: 0}
-  Maincamera: {fileID: 77182186}
-  duration: 2
 --- !u!1 &896719327 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8418720747102702701, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
@@ -389,7 +368,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1099701829
 GameObject:
@@ -506,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9317d7477fd8144c948447e8aaa209d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: 
   itemDesc: Opens doors
   sprite: {fileID: 21300000, guid: bbd3b85ea13d2854f9b6e69fec41a3cc, type: 3}
   inventoryManager: {fileID: 42270041}
@@ -595,7 +575,7 @@ Transform:
   m_Children:
   - {fileID: 467884114}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1665182164
 GameObject:
@@ -784,10 +764,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6305904171940811870, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 630816502}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded4a82eed129b943957cd1d50233162, type: 3}
 --- !u!1001 &3646596755125971631
 PrefabInstance:
@@ -803,7 +780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3105960093488984001, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3105960093488984001, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_LocalPosition.x
@@ -876,7 +853,7 @@ PrefabInstance:
       objectReference: {fileID: 630816495}
     - target: {fileID: 9126052252829481965, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9126052252829481965, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
       propertyPath: m_LocalPosition.x

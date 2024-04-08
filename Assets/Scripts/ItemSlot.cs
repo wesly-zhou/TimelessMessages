@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
+    public string itemName;
     public string itemDesc;
     public Sprite itemSprite;
     public bool occupied;
@@ -26,8 +27,9 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         inventoryManager = GameObject.Find("InventoryMenu").GetComponent<InventoryManager>();
     }
 
-    public void AddItem(string itemDesc, Sprite itemSprite)
+    public void AddItem(string itemName, string itemDesc, Sprite itemSprite)
     {
+        this.itemName = itemName;
         this.itemDesc = itemDesc;
         this.itemSprite = itemSprite;
         occupied = true;
