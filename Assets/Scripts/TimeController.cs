@@ -57,27 +57,6 @@ public class TimeController : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.F) && setupTime)
-        {   
-            print("Start1: " + startTransition1);
-            print("Start2: " + startTransition2);
-        
-            setupTime = false;
-            transitionTime = 0;
-            GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetInteger("direction", 3);
-            PlayerMovement.moveable = false;
-            print("player moveable: " + PlayerMovement.moveable);
-            usedTimeLeap = true;
-            startTransition1 = true;
-            Vector3 position = Maincamera.transform.position;
-            MainCameraPosition = position;
-            position.z = 0;
-            TimeLeapVFX.transform.position = position;
-            TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
-            StartCoroutine(TimeTravel());
-            // transitionTime = 0;
-        }
-
         if (startTransition1){
             transitionTime += Time.deltaTime;
             float lerpFactor = transitionTime / duration;
