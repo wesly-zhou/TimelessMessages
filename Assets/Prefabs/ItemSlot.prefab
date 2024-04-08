@@ -91,11 +91,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64843e9fea232e4783d9bf77862ccc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
   itemDesc: 
   itemSprite: {fileID: 0}
   occupied: 0
+  emptySprite: {fileID: 21300000, guid: ce3042fc976976b4285f46382b6355f2, type: 3}
   itemImage: {fileID: 5842622679038054310}
+  itemDescriptionImage: {fileID: 0}
+  itemDescriptionText: {fileID: 0}
   selectedShader: {fileID: 7905576193200918902}
   itemSelected: 0
 --- !u!1 &2818052479666605232

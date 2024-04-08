@@ -4,27 +4,20 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    [SerializeField]
-    private string itemName;
-
+    [TextArea]
     [SerializeField]
     private string itemDesc;
 
     [SerializeField]
     private Sprite sprite;
 
-    private InventoryManager inventoryManager;
-    // Start is called before the first frame update
-    void Start()
-    {
-        inventoryManager = GameObject.Find("InventoryMenu").GetComponent<InventoryManager>();
-    }
+    public InventoryManager inventoryManager;
 
     private void OnCollisionEnter2D(Collision2D collision) 
     {
         if (collision.gameObject.tag == "Player") 
         {
-            inventoryManager.AddItem(itemName, itemDesc, sprite);
+            inventoryManager.AddItem(itemDesc, sprite);
             Destroy(gameObject);
         }
     }
