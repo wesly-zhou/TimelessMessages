@@ -36,8 +36,7 @@ public class LockedDoorHandler : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         if (other.gameObject.tag == "Player" && unlocked == true) { 
-            OpenDoor();
-            SceneManager.LoadScene (newLevel);
+            StartCoroutine(OpenDoor());
         }
     }
 
@@ -73,6 +72,7 @@ public class LockedDoorHandler : MonoBehaviour
 
     public IEnumerator OpenDoor() 
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene (newLevel);
     }
 }

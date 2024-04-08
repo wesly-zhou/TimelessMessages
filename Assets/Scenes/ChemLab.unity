@@ -7374,7 +7374,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1585948628}
-  - {fileID: 3105960093193025072}
+  - {fileID: 4881537583068118320}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -21572,7 +21572,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 597491414021081047, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_Name
-      value: LockedDoor
+      value: BioLabDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2510293563511860214, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709080890903265628, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7856956
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709080890903265628, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6186133
+      objectReference: {fileID: 0}
+    - target: {fileID: 3709080890903265628, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 76.43
       objectReference: {fileID: 0}
     - target: {fileID: 3901339600802352375, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: newLevel
@@ -21582,13 +21598,21 @@ PrefabInstance:
       propertyPath: keyRequired
       value: BioLabKey
       objectReference: {fileID: 0}
+    - target: {fileID: 3952173082350786223, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5721734039008515624, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.85
+      value: -11.5
       objectReference: {fileID: 0}
     - target: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21631,7 +21655,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
---- !u!4 &3105960093193025072 stripped
+--- !u!4 &4881537583068118320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
   m_PrefabInstance: {fileID: 3075151293590389777}
