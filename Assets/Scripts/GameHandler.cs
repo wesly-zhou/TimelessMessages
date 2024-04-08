@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
+    private InventoryManager inventoryManager;
+
+    private void Start() {
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+    }
+
     public void StartGame() {
         SceneManager.LoadScene("PastLab");
     }
@@ -25,4 +31,10 @@ public class GameHandler : MonoBehaviour
         Application.Quit();
         #endif
     }
+
+    public void OpenMenu() 
+    {
+        inventoryManager.inventoryMenu.SetActive(true);
+        inventoryManager.closeButton.SetActive(true);
+    }        
 }

@@ -14,7 +14,11 @@ public class Item : MonoBehaviour
     [SerializeField]
     private Sprite sprite;
 
-    public InventoryManager inventoryManager;
+    private InventoryManager inventoryManager;
+
+    private void Start() {
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision) 
     {
