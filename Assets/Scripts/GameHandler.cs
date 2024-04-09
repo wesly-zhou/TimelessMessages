@@ -10,10 +10,11 @@ public class GameHandler : MonoBehaviour
 
     private void Start() {
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("PastLab");
+        SceneManager.LoadScene("Lab");
     }
 
     public void Main() {

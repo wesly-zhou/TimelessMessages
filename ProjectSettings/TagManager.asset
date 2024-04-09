@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GameHandler
   - TimeLeapVFX
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -16,10 +17,10 @@ TagManager:
   - Ignore Rendering
   - StartScene
   - SecurityRoom
-  - 
-  - 
-  - 
-  - 
+  - BioLab
+  - LoungeRoom
+  - MeetingRoom
+  - ChemLab
   - 
   - 
   - 
@@ -48,4 +49,7 @@ TagManager:
     locked: 0
   - name: SceneEffect
     uniqueID: 3220630273
+    locked: 0
+  - name: UI_Panel
+    uniqueID: 799876421
     locked: 0
