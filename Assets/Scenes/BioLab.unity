@@ -197,11 +197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8583184712925994368, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8583184712925994368, guid: b5a2844fa344022429292031f9eb0401, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1074337023
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9112292816200776324, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: newLevel
@@ -17881,15 +17877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566467084642854949, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6566467084642854949, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6566467084642854949, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1074337023
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6826822669216557091, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_Layer
@@ -17909,7 +17897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.415851
+      value: 9.415851
       objectReference: {fileID: 0}
     - target: {fileID: 7571559631537289505, guid: 762001e567e26244dadefc7b499c3c17, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18345,6 +18333,10 @@ PrefabInstance:
     - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: smoothing
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864126938701631255, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 639
       objectReference: {fileID: 0}
     - target: {fileID: 3969345513888252860, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: camSpeed
