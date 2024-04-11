@@ -10498,15 +10498,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2616252779618007673, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
       propertyPath: m_Layer
-      value: 12
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223091250077901724, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 12479
       objectReference: {fileID: 0}
     - target: {fileID: 8418720747102702701, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
       propertyPath: m_Name
       value: TimeLeapVFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 8418720747102702701, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
-      propertyPath: m_Layer
-      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 9126052252829481965, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
       propertyPath: m_RootOrder
