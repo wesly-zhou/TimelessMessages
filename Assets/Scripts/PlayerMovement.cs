@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     public Sprite forward;
     public Sprite back;
     public Sprite right;
+    // public GameObject playerArt;
 
     public static bool moveable = true;
     public AudioSource walkSound;//sound effect
@@ -99,9 +100,9 @@ public class PlayerMovement : MonoBehaviour
         faceRight = !faceRight;
         Debug.Log("FaceRight = " + faceRight);
         // NOTE: Multiply player's x local scale by -1.
-        Vector3 theScale = gameObject.transform.localScale;
+        Vector3 theScale = GameObject.FindGameObjectWithTag("PlayerArt").transform.localScale;
         theScale.x = theScale.x * -1;
-        gameObject.transform.localScale = theScale;
+        GameObject.FindGameObjectWithTag("PlayerArt").transform.localScale = theScale;
         Debug.Log("the Scale = " + theScale);
     }
 }
