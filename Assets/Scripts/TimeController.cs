@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding;
 using UnityEngine;
 
 public class TimeController : MonoBehaviour
@@ -25,6 +26,7 @@ public class TimeController : MonoBehaviour
     // public float speed1;
     // public float speed2;
     private static bool setupTime = true;
+    public GameObject Enemy;
     void Start()
     {
         transitionTime = 0;
@@ -79,6 +81,12 @@ public class TimeController : MonoBehaviour
 
         if (startTransition2 && usedTimeLeap){
             PlayerMovement.moveable = false;
+            // Set Enemy state
+            if(Enemy != null){
+                Enemy.GetComponent<AIPath>().canMove = false;
+                // Debug.Log("Enemy cannot move: " + Enemy.GetComponent<AIPath>().canMove);
+            }
+            
             StartCoroutine(Waiting());
             transitionTime += Time.deltaTime;
             float lerpFactor = transitionTime / duration;
@@ -97,6 +105,9 @@ public class TimeController : MonoBehaviour
                 TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = false;
                 setupTime = true;
                 PlayerMovement.moveable = true;
+            //     if(Enemy != null){
+            //     Enemy.GetComponent<AIPath>().canMove = true;
+            // }
                 transitionTime = 0;
                 print("now you can move");
             }
@@ -120,6 +131,9 @@ public class TimeController : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetInteger("direction", 3);
             PlayerMovement.moveable = false;
             print("player moveable: " + PlayerMovement.moveable);
+            if(Enemy != null){
+                Enemy.GetComponent<AIPath>().canMove = false;
+            }
             usedTimeLeap = true;
             startTransition1 = true;
             Vector3 position = Maincamera.transform.position;

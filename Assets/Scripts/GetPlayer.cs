@@ -11,7 +11,7 @@ public class GetPlayer : MonoBehaviour
         GameObject Player  = GameObject.FindWithTag("Player");
         if(Player != null) print("Player Found");
         else print("Player Not Found");
-        gameObject.GetComponent<Button>().onClick.AddListener(() => Player.GetComponent<PlayerController>().OnbuttonClick());
+        gameObject.GetComponent<Button>().onClick.AddListener(() => Player.GetComponent<PlayerControllerDelete>().OnbuttonClick());
     }
 
     // Update is called once per frame

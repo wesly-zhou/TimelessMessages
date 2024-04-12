@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -105,4 +106,6 @@ public class PlayerMovement : MonoBehaviour
         GameObject.FindGameObjectWithTag("PlayerArt").transform.localScale = theScale;
         Debug.Log("the Scale = " + theScale);
     }
+
+    
 }

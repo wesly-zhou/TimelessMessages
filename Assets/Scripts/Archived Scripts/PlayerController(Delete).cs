@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControllerDelete : MonoBehaviour
 {
     public GameObject TimeLeapVFX;
     public Material material;
