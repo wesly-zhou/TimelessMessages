@@ -29,37 +29,39 @@ public class PlayerController : MonoBehaviour
 
     private void ShowTutorial() {
         Debug.Log("DeathNum: " + GameManager.TestLab);
-        if (RoomManager.GetComponent<RoomManager>().TutorialText.Length >= GameManager.TestLab && justDied) {
-            
-            // Debug.Log("DeathNum: " + DeathNum);
-
-            switch(GameManager.TestLab) {
-                case 0:
-                    break;
-                case 1:
-                    tutorialTextBubble.SetActive(true);
-                    tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[0];
-                    StartCoroutine(WaitAndHideTutorial());
-                    break;
-                case 2:
-                    tutorialTextBubble.SetActive(true);
-                    tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[1];
-                    StartCoroutine(WaitAndHideTutorial());
-                    break;
-                case 3:
-                    tutorialTextBubble.SetActive(true);
-                    tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[2];
-                    StartCoroutine(WaitAndHideTutorial());
-                    break;
-                default:
-                    break;
-            }
-    }
-    else if(RoomManager.GetComponent<RoomManager>().TutorialText.Length < GameManager.TestLab && justDied){
-        tutorialTextBubble.SetActive(true);
-        tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[RoomManager.GetComponent<RoomManager>().TutorialText.Length - 1];
-        StartCoroutine(WaitAndHideTutorial());
-    }
+        if(RoomManager != null && RoomManager.GetComponent<RoomManager>().TutorialText != null){
+            if (RoomManager.GetComponent<RoomManager>().TutorialText.Length >= GameManager.TestLab && justDied) {
+                
+                // Debug.Log("DeathNum: " + DeathNum);
+                // Show the hint based on the death number
+                switch(GameManager.TestLab) {
+                    case 0:
+                        break;
+                    case 1:
+                        tutorialTextBubble.SetActive(true);
+                        tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[0];
+                        StartCoroutine(WaitAndHideTutorial());
+                        break;
+                    case 2:
+                        tutorialTextBubble.SetActive(true);
+                        tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[1];
+                        StartCoroutine(WaitAndHideTutorial());
+                        break;
+                    case 3:
+                        tutorialTextBubble.SetActive(true);
+                        tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[2];
+                        StartCoroutine(WaitAndHideTutorial());
+                        break;
+                    default:
+                        break;
+                }
+        }
+        else if(RoomManager.GetComponent<RoomManager>().TutorialText.Length < GameManager.TestLab && justDied){
+            tutorialTextBubble.SetActive(true);
+            tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[RoomManager.GetComponent<RoomManager>().TutorialText.Length - 1];
+            StartCoroutine(WaitAndHideTutorial());
+        }
+        }
     }
 
     IEnumerator WaitAndHideTutorial() {
@@ -79,12 +81,14 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    // When player is hit by the enemy, player dies
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.tag == "Enemy")
         {
             Debug.Log("Player has been hit by the Enemy");
             GameManager.TestLab += 1;
+            // Make sure that the text bubble will shown just when player dies
             justDied = true;
             // DeathNum = GameManager.TestLab + 1;
             // PlayerPrefs.SetInt(SceneManager.GetActiveScene().name, DeathNum + 1);

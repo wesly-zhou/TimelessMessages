@@ -78,13 +78,14 @@ public class TimeController : MonoBehaviour
                 transitionTime = 0;
             }
         }
-
+        // When timeleap to a new scene 
         if (startTransition2 && usedTimeLeap){
             PlayerMovement.moveable = false;
             // Set Enemy state
             if(Enemy != null){
-                Enemy.GetComponent<AIPath>().canMove = false;
+                // Enemy.GetComponent<AIPath>().canMove = false;
                 // Debug.Log("Enemy cannot move: " + Enemy.GetComponent<AIPath>().canMove);
+                Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             }
             
             StartCoroutine(Waiting());
@@ -108,6 +109,7 @@ public class TimeController : MonoBehaviour
             //     if(Enemy != null){
             //     Enemy.GetComponent<AIPath>().canMove = true;
             // }
+                Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 transitionTime = 0;
                 print("now you can move");
             }

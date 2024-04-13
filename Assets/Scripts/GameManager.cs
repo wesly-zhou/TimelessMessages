@@ -7,7 +7,9 @@ public class GameManager : MonoBehaviour
     // The Death nubmer of all the scene
     public static int TestLab = 0;
 
-    // Start is called before the first frame update
+
+    // Store the information of last room
+    public static string LastRoom = "ChemLab";
     
     void Start()
     {

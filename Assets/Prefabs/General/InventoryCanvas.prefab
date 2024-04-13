@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2819708650122462268}
   - component: {fileID: 634724693304368259}
   - component: {fileID: 8378342903578470901}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: InventorySlots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 3395305713646651833}
   - component: {fileID: 6837046621639283523}
   - component: {fileID: 3711483487377033526}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: ItemDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +471,7 @@ RectTransform:
   - {fileID: 2652381017132264919}
   - {fileID: 5338525171880672618}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -496,7 +496,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 7824363488683206436}
   - component: {fileID: 4538676447996110018}
   - component: {fileID: 7552424940991194731}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: ItemImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 1574788708613006278}
   - component: {fileID: 1365548506371458240}
   - component: {fileID: 157195943723065179}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: InventoryDescription
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -778,7 +778,7 @@ GameObject:
   - component: {fileID: 7542981557756407052}
   - component: {fileID: 4236814970474732479}
   - component: {fileID: 1073995728665296663}
-  m_Layer: 7
+  m_Layer: 5
   m_Name: InventoryMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -828,14 +828,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9843137}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: adc125101cbb0804c9b8af7f3adb21d3, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -913,7 +913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2283599275291854274, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5222748273556001234, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_Pivot.x
@@ -1001,12 +1001,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6093299135997495615, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6093299135997495615, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 747e772c754242d49a817fe2317a4bb5, type: 3}
+      objectReference: {fileID: 21300000, guid: 0282d5679668d964c9f02d062737bafd, type: 3}
     - target: {fileID: 6093299135997495615, guid: 34e307e331a01854aa21fbe3443ff7aa, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -2342,7 +2342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2295976648667666011, guid: 7e66f56098e974042b3ecc716d07f139, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2692939734312650703, guid: 7e66f56098e974042b3ecc716d07f139, type: 3}
       propertyPath: itemDescriptionText

@@ -10,20 +10,29 @@ public class RoomManager : MonoBehaviour
     public int DeathNum;
     public GameObject scene;
     private bool ParentState = true;  // Assuming the parent starts active
-    public GameObject Monster;
+    public GameObject Enemy;
     public GameObject Player;
 
     // Turtorial Text for the monster puzzle
     [SerializeField]
     [TextArea]
     public String[] TutorialText;
+
+    // The name of last scene
+    private string LastRoom;
     // Start is called before the first frame update
     
-    void Start()
+    void Awake()
     {
         
     }
+    void Start()
+    {
+        // LastRoom = GameManager.LastRoom;
+        
+    }
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -31,13 +40,13 @@ public class RoomManager : MonoBehaviour
         if (scene != null && scene.activeInHierarchy != ParentState)
         {
             ParentState = scene.activeInHierarchy;
-            if (ParentState && Monster != null)
+            if (ParentState && Enemy != null)
             {
                 Debug.Log("Monster Reset");
-                Debug.Log(Monster.GetComponent<AIPath>().canMove);
+                Debug.Log(Enemy.GetComponent<AIPath>().canMove);
                 // Monster.GetComponent<AIPath>().canMove = false;
-                Monster.transform.Find("AlertArea").GetComponent<SpriteRenderer>().enabled = true;
-                Monster.GetComponentInChildren<AIDestinationSetter>().enabled = false;
+                Enemy.transform.Find("AlertArea").GetComponent<SpriteRenderer>().enabled = true;
+                Enemy.GetComponentInChildren<AIDestinationSetter>().enabled = false;
                 
             }
             // ParentState = transform.parent.parent.gameObject.activeInHierarchy;

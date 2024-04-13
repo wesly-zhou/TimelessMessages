@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7726964354805675330}
   - component: {fileID: 150846331045913496}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FootSteps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4696200455631539222}
   - component: {fileID: 6416799592908863162}
   - component: {fileID: 2627621400057574894}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: player_art
   m_TagString: PlayerArt
   m_Icon: {fileID: 0}
@@ -302,8 +302,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -671701359
+  m_SortingLayer: 1
   m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: f4a62c7c70725a34ebfd3267f4cfa990, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 167560448904259708}
   - component: {fileID: 3289238579017433261}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -426,7 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8325258757993210975}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AUDIO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 3678969225232991378}
   - component: {fileID: 6756160231032234431}
   m_Layer: 9
-  m_Name: Square
+  m_Name: TextBubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -550,7 +550,7 @@ GameObject:
   - component: {fileID: 3172434601664977627}
   - component: {fileID: 6249257852891451561}
   - component: {fileID: 169459141161679348}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -574,7 +574,7 @@ Transform:
   - {fileID: 5758971449492084948}
   - {fileID: 3678969225232991378}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3965435501575454393
 Rigidbody2D:
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6305904171940811870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 441647af253917243971c32733ecfad6, type: 3}
   m_Name: 
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6305904171940811870}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d1b2ee031faa7ec499815f9a991c9314, type: 3}
   m_Name: 
@@ -748,7 +748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5758971449492084948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
