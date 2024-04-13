@@ -1,15 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
+using UnityEditor.Search;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviour
 {
     public int DeathNum;
     public GameObject scene;
     private bool ParentState = true;  // Assuming the parent starts active
     public GameObject Monster;
+    public GameObject Player;
+
+    // Turtorial Text for the monster puzzle
+    [SerializeField]
+    [TextArea]
+    public String[] TutorialText;
     // Start is called before the first frame update
+    
     void Start()
     {
         
@@ -27,7 +36,7 @@ public class RoomManager : MonoBehaviour
                 Debug.Log("Monster Reset");
                 Debug.Log(Monster.GetComponent<AIPath>().canMove);
                 // Monster.GetComponent<AIPath>().canMove = false;
-                Monster.transform.Find("AlertArea").gameObject.SetActive(true);
+                Monster.transform.Find("AlertArea").GetComponent<SpriteRenderer>().enabled = true;
                 Monster.GetComponentInChildren<AIDestinationSetter>().enabled = false;
                 
             }

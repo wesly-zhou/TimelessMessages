@@ -465,7 +465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3678969225232991378
 Transform:
   m_ObjectHideFlags: 0
@@ -737,6 +737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db041b40662832247896952755105cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RoomManager: {fileID: 0}
+  tutorialTextBubble: {fileID: 5561173276727343221}
 --- !u!1 &7176074295733864340
 GameObject:
   m_ObjectHideFlags: 0

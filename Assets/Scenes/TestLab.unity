@@ -17606,6 +17606,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169459141161679348, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: RoomManager
+      value: 
+      objectReference: {fileID: 1196234170}
     - target: {fileID: 575263993776429394, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -17681,10 +17685,6 @@ PrefabInstance:
     - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Name
       value: TextBubble
-      objectReference: {fileID: 0}
-    - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6249257852891451561, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Enabled
@@ -18898,6 +18898,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 2845920473697763501, guid: 315353c485481a8499054ffe2da94997, type: 3}
+      propertyPath: itemSOs.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3231762955982412858, guid: 315353c485481a8499054ffe2da94997, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -19618,6 +19622,10 @@ MonoBehaviour:
   DeathNum: 0
   scene: {fileID: 168229050}
   Monster: {fileID: 1371833666}
+  Player: {fileID: 0}
+  TutorialText:
+  - I have to distract that monster...
+  - The timeleap watch may be useful...
 --- !u!1 &1229618624
 GameObject:
   m_ObjectHideFlags: 0
