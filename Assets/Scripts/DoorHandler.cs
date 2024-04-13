@@ -8,7 +8,6 @@ public class DoorHandler : MonoBehaviour
     public string newLevel;
     public GameObject player;
     // Use an empty gameobject to define a new position for the player to spawn in the new level
-    // public string lastRoom;
     public GameObject newPoisiton;
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {

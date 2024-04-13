@@ -15,7 +15,9 @@ public class LockedDoorHandler : MonoBehaviour
     public GameObject missingKeyBubble;
     public int state = 0;
     public AudioSource doorOpenSFX;
-
+    public GameObject player;
+    // Use an empty gameobject to define a new position for the player to spawn in the new level
+    public GameObject newPoisiton;
     // Start is called before the first frame update
     private void Start()
     {
@@ -32,6 +34,9 @@ public class LockedDoorHandler : MonoBehaviour
         else if (other.gameObject.tag == "Player" && unlocked == false && state == 1) {
             missingKeyBubble.SetActive(true);
         }
+        // else if (other.gameObject.tag == "Player" && unlocked == true) {
+            
+        // }
     }
 
     private void OnTriggerStay2D(Collider2D other) {
@@ -75,4 +80,26 @@ public class LockedDoorHandler : MonoBehaviour
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene (newLevel);
     }
+
+    // Relocated the player based on the last room when the new scene is loaded
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        // On scene load, move the player to the new position
+        Debug.Log("Moving player to new position" + newPoisiton.transform.position);
+        Debug.Log("Last Room: " + GameManager.LastRoom + " New Level: " + newLevel);
+        if(newPoisiton != null && GameManager.LastRoom == newLevel) {  // The new scene of the door actually is the last scene of the player
+            
+            player.transform.position = newPoisiton.transform.position;
+            GameManager.LastRoom = SceneManager.GetActiveScene().name;
+        }
+    }
+
+    
+    void OnEnable() {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDisable() {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
 }
