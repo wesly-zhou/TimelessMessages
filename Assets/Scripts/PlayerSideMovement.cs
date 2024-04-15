@@ -4,10 +4,23 @@ using UnityEngine;
 
 public class PlayerSideMovement : MonoBehaviour 
 {
+    public Rigidbody2D player;
 	private bool faceRight = true;  // determine which way player is facing.
-	public float runSpeed = 3f;
+	public float runSpeed = 5f;
+    public float jumpSpeed = 8f;
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask groundLayer;
+    public bool isTouchingGround;
+    public float fallMultiplier = 2.5f;
+    public float lowJumpMultiplier = 2f;
 
-	void Update () {
+    void Start() {
+        player = GetComponent<Rigidbody2D>();
+    }
+
+	void Update() {
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
 		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
 		transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
@@ -17,7 +30,17 @@ public class PlayerSideMovement : MonoBehaviour
         {
 			Turn();
 		}
+
+        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isTouchingGround) {
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
+
+        if (player.velocity.y < 0)
+            player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
+            player.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
 	}
+
 	private void Turn()
 	{
 		// Switch player facing label
