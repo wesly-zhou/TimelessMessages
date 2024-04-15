@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class PlayerSideMovement : MonoBehaviour 
 {
+    public Rigidbody2D player;
 	private bool faceRight = true;  // determine which way player is facing.
-	public float runSpeed = 3f;
+	public float runSpeed = 5f;
+    public float jumpSpeed = 8f;
 
-	void Update () {
+    void Start() {
+        player = GetComponent<Rigidbody2D>();
+    }
+
+	void Update() {
 		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
 		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
 		transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
@@ -17,7 +23,12 @@ public class PlayerSideMovement : MonoBehaviour
         {
 			Turn();
 		}
+
+        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) {
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        }
 	}
+
 	private void Turn()
 	{
 		// Switch player facing label
@@ -28,4 +39,8 @@ public class PlayerSideMovement : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+    private void Jump() {
+
+    }
 }
