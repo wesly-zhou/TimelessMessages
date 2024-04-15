@@ -78,6 +78,7 @@ public class RoomManager : MonoBehaviour
                 StopAllCoroutines();
                 textBubble.GetComponentInChildren<Text>().text = DialogueText[diaNum];
                 showNext = true;
+                textBubble.GetComponentInChildren<Image>().enabled = true;
                 // diaNum++;
             }
             else if(diaNum < DialogueText.Length - 1)
@@ -114,8 +115,10 @@ public class RoomManager : MonoBehaviour
 
     private IEnumerator TypeDialogue(string sentence)
     {
+        textBubble.GetComponentInChildren<Image>().enabled = false;
         // textBubble.SetActive(true);
         textBubble.GetComponentInChildren<Text>().text = "";
+        showNext = false;
         foreach (char letter in sentence.ToCharArray())
         {
             // If player press E in advance, show the whole sentence
