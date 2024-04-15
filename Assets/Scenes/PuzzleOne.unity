@@ -9424,7 +9424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1151674086}
   - component: {fileID: 1151674085}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: FloorColliderTEMP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9954,6 +9954,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: groundCheckRadius
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 32768
+      objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -9976,7 +9984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.8
+      value: -6.23
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.z
