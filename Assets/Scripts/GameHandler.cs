@@ -14,7 +14,7 @@ public class GameHandler : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("ChemLab");
+        SceneManager.LoadScene("IntroScene");
     }
 
     public void Main() {
