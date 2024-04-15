@@ -24,17 +24,34 @@ public class PlayerController : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
     Debug.Log("Scene loaded: " + scene.name);
     // On scene load, show the tutorial based on the death number of player
-    ShowTutorial();
+    // Get the death number of player base on the current scene
+    int deathNum = GameManager.DeathNum[scene.name];
+    // switch(SceneManager.GetActiveScene().name){
+    //     case "TestLab":
+    //         deathNum = GameManager.TestLab;
+    //         break;
+    //     case "ChemLab":
+    //         deathNum = GameManager.ChemLab;
+    //         break;
+    //     case "SecurityRoom":    
+    //         deathNum = GameManager.SecurityRoom;
+    //         break;
+    //     case "BioLab":        
+    //         deathNum = GameManager.BioLab;
+    //         break;
+
+    // }
+    ShowTutorial(deathNum);
     }
 
-    private void ShowTutorial() {
-        Debug.Log("DeathNum: " + GameManager.TestLab);
+    private void ShowTutorial(int deathNum) {
+        Debug.Log("DeathNum: " + GameManager.DeathNum[SceneManager.GetActiveScene().name]);
         if(RoomManager != null && RoomManager.GetComponent<RoomManager>().TutorialText != null){
-            if (RoomManager.GetComponent<RoomManager>().TutorialText.Length >= GameManager.TestLab && justDied) {
+            if (RoomManager.GetComponent<RoomManager>().TutorialText.Length >= deathNum && justDied) {
                 
                 // Debug.Log("DeathNum: " + DeathNum);
                 // Show the hint based on the death number
-                switch(GameManager.TestLab) {
+                switch(deathNum) {
                     case 0:
                         break;
                     case 1:
@@ -56,7 +73,7 @@ public class PlayerController : MonoBehaviour
                         break;
                 }
         }
-        else if(RoomManager.GetComponent<RoomManager>().TutorialText.Length < GameManager.TestLab && justDied){
+        else if(RoomManager.GetComponent<RoomManager>().TutorialText.Length < deathNum && justDied){
             tutorialTextBubble.SetActive(true);
             tutorialTextBubble.GetComponentInChildren<Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[RoomManager.GetComponent<RoomManager>().TutorialText.Length - 1];
             StartCoroutine(WaitAndHideTutorial());
@@ -87,7 +104,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Enemy")
         {
             Debug.Log("Player has been hit by the Enemy");
-            GameManager.TestLab += 1;
+            GameManager.DeathNum[SceneManager.GetActiveScene().name] += 1;
             // Make sure that the text bubble will shown just when player dies
             justDied = true;
             // DeathNum = GameManager.TestLab + 1;

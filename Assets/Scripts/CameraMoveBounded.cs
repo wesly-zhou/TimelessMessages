@@ -18,7 +18,7 @@ public class CameraMoveBounded : MonoBehaviour {
               {
               Destroy(gameObject);
               }
-              target = GameObject.FindGameObjectWithTag("Player").transform;
+              // target = GameObject.FindGameObjectWithTag("Player").transform;
        }
        
        void Start () {

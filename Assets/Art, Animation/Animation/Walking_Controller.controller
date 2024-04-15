@@ -356,7 +356,7 @@ AnimatorController:
   - m_Name: direction
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 2
+    m_DefaultInt: 3
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   m_AnimatorLayers:
@@ -724,7 +724,7 @@ AnimatorStateMachine:
     m_Position: {x: 500, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1645259370272047969}
-    m_Position: {x: 500, y: 250, z: 0}
+    m_Position: {x: 500, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1421441902095945025}
     m_Position: {x: 950, y: 310, z: 0}

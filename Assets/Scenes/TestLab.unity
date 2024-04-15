@@ -201,7 +201,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9112292816200776324, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: newLevel
-      value: ChemLab
+      value: TestChemLab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17481,17 +17481,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 834756947}
+    - target: {fileID: 2627621400057574894, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.07
+      value: -3.96
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.93
+      value: 6.74
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.z
@@ -17537,6 +17541,11 @@ PrefabInstance:
 --- !u!1 &624226199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6305904171940811870, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+  m_PrefabInstance: {fileID: 624226198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &624226200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1288277031256783370, guid: ded4a82eed129b943957cd1d50233162, type: 3}
   m_PrefabInstance: {fileID: 624226198}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &664032367
@@ -18276,6 +18285,57 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &1019251271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019251272}
+  - component: {fileID: 1019251273}
+  m_Layer: 0
+  m_Name: RoomDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1019251272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019251271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.8366995, y: -3.4267993, z: -0.09023011}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1019251273
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019251271}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 3a232f8391c9ac34ea9c4ffce5f22a45, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References:
+    - b76a716726d810b428d5664088294d3d: {fileID: 624226200}
+    - b7b3fcbcc2a27f34bb0dfffb6cd5f2db: {fileID: 624226199}
 --- !u!1 &1032957225
 GameObject:
   m_ObjectHideFlags: 0
@@ -37270,6 +37330,10 @@ PrefabInstance:
       propertyPath: Monster
       value: 
       objectReference: {fileID: 1371833666}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: director
+      value: 
+      objectReference: {fileID: 1019251273}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
       value: RoomManager
