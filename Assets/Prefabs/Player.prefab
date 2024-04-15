@@ -355,7 +355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1205881798004913248
 RectTransform:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I must find a way to aovid that monster...
+  m_Text: 
 --- !u!1 &4163387481523116476
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,7 +828,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
-  canJump: 0
+  isTouchingGround: 0
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!114 &169459141161679348
 MonoBehaviour:
   m_ObjectHideFlags: 0

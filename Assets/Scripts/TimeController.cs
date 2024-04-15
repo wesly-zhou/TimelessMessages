@@ -109,7 +109,7 @@ public class TimeController : MonoBehaviour
             //     if(Enemy != null){
             //     Enemy.GetComponent<AIPath>().canMove = true;
             // }
-                Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                if(Enemy != null) Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
                 transitionTime = 0;
                 print("now you can move");
             }

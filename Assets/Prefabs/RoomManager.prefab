@@ -46,8 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathNum: 0
   scene: {fileID: 0}
-  Monster: {fileID: 0}
+  Enemy: {fileID: 0}
   Player: {fileID: 0}
+  textBubble: {fileID: 0}
+  director: {fileID: 0}
+  UIButton: {fileID: 0}
   TutorialText:
   - I have to distract that monster...
   - The timeleap watch may be useful...
+  DialogueText:
+  - Where am I ?
+  - What happened for my lab ?
+  - I must save everything...
