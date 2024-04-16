@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
     private InventoryManager inventoryManager;
 
     private void Start() {
-        // inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     public void StartGame() {
