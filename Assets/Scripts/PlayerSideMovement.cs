@@ -6,8 +6,8 @@ public class PlayerSideMovement : MonoBehaviour
 {
     public Rigidbody2D player;
 	private bool faceRight = true;  // determine which way player is facing.
-	public float runSpeed = 5f;
-    public float jumpSpeed = 8f;
+	public float runSpeed = 8f;
+    public float jumpSpeed = 12f;
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask groundLayer;

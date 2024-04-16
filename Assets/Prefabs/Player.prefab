@@ -821,10 +821,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  runSpeed: 5
-  jumpSpeed: 8
+  runSpeed: 8
+  jumpSpeed: 12
   groundCheck: {fileID: 6479897757579078295}
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 32768
