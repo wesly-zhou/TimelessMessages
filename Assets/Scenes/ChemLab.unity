@@ -22387,6 +22387,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1903227655}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -22401,6 +22405,14 @@ PrefabInstance:
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: DialogueText.Array.data[2]
       value: It should be in the security room up above...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.data[3]
+      value: (Tutorial will be changed to pick up watch)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.data[4]
+      value: (For now, you can time travel with the button)
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.data[0]
@@ -22661,7 +22673,7 @@ PrefabInstance:
       objectReference: {fileID: 1903227653}
     - target: {fileID: 9112292816200776324, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: newLevel
-      value: PuzzleTwoDoor
+      value: PuzzleTwo
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
