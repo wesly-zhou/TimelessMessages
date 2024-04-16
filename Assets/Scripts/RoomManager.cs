@@ -45,14 +45,14 @@ public class RoomManager : MonoBehaviour
     void Start()
     {
         // LastRoom = GameManager.LastRoom;
-        if(SceneAnim) 
+        if(SceneAnim || SceneManager.GetActiveScene().name == "SecurityRoom") 
             return;
         else
         {
             // Play the director
             if(director != null)
             {
-                UIButton.SetActive(false);
+                if(UIButton != null) UIButton.SetActive(false);
                 PlayerMovement.moveable = false;
                 director.Play();
                 if (DialogueText.Length > 0)
@@ -62,7 +62,7 @@ public class RoomManager : MonoBehaviour
                 GameManager.SceneAnim[SceneManager.GetActiveScene().name] = true;
             }
         }
-        
+        Debug.Log("SceneAnim: " + GameManager.SceneAnim[SceneManager.GetActiveScene().name]);
     }
 
     

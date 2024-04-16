@@ -61,7 +61,7 @@ public class MonitorController : MonoBehaviour
             // UI.enabled = true;
             UI.gameObject.SetActive(true);
         }
-        if(isNearMonitor && Input.GetKeyDown(KeyCode.F))
+        if(isNearMonitor && Input.GetKeyDown(KeyCode.F) && !isMonitorOpen)
         {
             Debug.Log("Player pressed E key near the monitor");
             StartCoroutine(LoadAsyncScene());
