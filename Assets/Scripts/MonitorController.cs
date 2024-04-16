@@ -9,6 +9,10 @@ public class MonitorController : MonoBehaviour
     public Canvas UI;
     private bool isNearMonitor = false;
     private bool isMonitorOpen = false;
+    public GameObject textBubble;
+    public GameObject RoomManager;
+    private int interactNum = 0;
+    private Coroutine displayCoroutine;
     
     // Start is called before the first frame update
 
@@ -61,7 +65,7 @@ public class MonitorController : MonoBehaviour
             // UI.enabled = true;
             UI.gameObject.SetActive(true);
         }
-        if(isNearMonitor && Input.GetKeyDown(KeyCode.F) && !isMonitorOpen)
+        if(isNearMonitor && Input.GetKeyDown(KeyCode.F) && !isMonitorOpen && TimeController.isPresent == false)
         {
             Debug.Log("Player pressed E key near the monitor");
             StartCoroutine(LoadAsyncScene());
@@ -70,6 +74,29 @@ public class MonitorController : MonoBehaviour
             isMonitorOpen = true;
             PlayerMovement.moveable = false;
             GameObject.FindGameObjectWithTag("UI").SetActive(false);
+        }
+        else if(isNearMonitor && Input.GetKeyDown(KeyCode.F) && !isMonitorOpen && TimeController.isPresent == true)
+        {
+            Debug.Log("Player pressed E key near the monitor");
+            if (RoomManager != null && RoomManager.GetComponent<RoomManager>().TutorialText != null)
+            {
+                if (RoomManager.GetComponent<RoomManager>().TutorialText.Length > interactNum)
+                {
+                    if (displayCoroutine != null) StopCoroutine(displayCoroutine);
+                    textBubble.SetActive(true);
+                    textBubble.GetComponentInChildren<UnityEngine.UI.Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[interactNum];
+                    interactNum++;
+                    displayCoroutine = StartCoroutine(WaitAndHideTutorial());
+                }
+                else
+                {
+                    if (displayCoroutine != null) StopCoroutine(displayCoroutine);
+                    textBubble.SetActive(true);
+                    textBubble.GetComponentInChildren<UnityEngine.UI.Text>().text = RoomManager.GetComponent<RoomManager>().TutorialText[RoomManager.GetComponent<RoomManager>().TutorialText.Length - 1];
+                    interactNum++;
+                    displayCoroutine = StartCoroutine(WaitAndHideTutorial());
+                }
+            }
         }
     }
 
@@ -131,5 +158,12 @@ public class MonitorController : MonoBehaviour
                 Destroy(obj);
             }
         }
+    }
+
+    IEnumerator WaitAndHideTutorial() {
+    
+        yield return new WaitForSeconds(3.5f);
+        textBubble.SetActive(false);
+        
     }
 }

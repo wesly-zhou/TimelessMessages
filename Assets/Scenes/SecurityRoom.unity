@@ -2404,7 +2404,19 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1267943677557056093, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1288277031256783370, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297046248836886482, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639702912198465456, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
@@ -2460,6 +2472,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6249257852891451561, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2484,6 +2500,11 @@ PrefabInstance:
 --- !u!1 &443032936 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6305904171940811870, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+  m_PrefabInstance: {fileID: 443032935}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &443032937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
   m_PrefabInstance: {fileID: 443032935}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &447619654
@@ -10973,6 +10994,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: scene
+      value: 
+      objectReference: {fileID: 1069907066}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: TutorialText.Array.data[0]
+      value: It doesn't wrok...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: TutorialText.Array.data[1]
+      value: It must be intact in the past
+      objectReference: {fileID: 0}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
       value: RoomManager
@@ -12534,6 +12567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoniorPanel: {fileID: 1100856901}
   UI: {fileID: 1144459848}
+  textBubble: {fileID: 443032937}
+  RoomManager: {fileID: 1253673850}
 --- !u!1001 &1485276207
 PrefabInstance:
   m_ObjectHideFlags: 0

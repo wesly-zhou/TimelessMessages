@@ -34,6 +34,7 @@ public class LockedDoorHandler : MonoBehaviour
         else if (other.gameObject.tag == "Player" && unlocked == false && state == 1) {
             missingKeyBubble.SetActive(true);
         }
+        interactable = true;
         // else if (other.gameObject.tag == "Player" && unlocked == true) {
             
         // }
@@ -60,12 +61,12 @@ public class LockedDoorHandler : MonoBehaviour
                 unlockable = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.F) && !unlockable) {
+        if (Input.GetKeyDown(KeyCode.F) && !unlockable && interactable) {
             unlockDoorBubble.SetActive(false);
             missingKeyBubble.SetActive(true);
             state = 1;
         }
-        else if (Input.GetKeyDown(KeyCode.F) && unlockable) {
+        else if (Input.GetKeyDown(KeyCode.F) && unlockable && interactable) {
             unlockDoorBubble.SetActive(false);
             state = 2;
             if (doorOpenSFX.isPlaying == false) {
