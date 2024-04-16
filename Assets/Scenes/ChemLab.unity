@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &1476313 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-  m_PrefabInstance: {fileID: 1692168900}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &10173372
 GameObject:
   m_ObjectHideFlags: 0
@@ -8203,38 +8198,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!1 &47000003
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 47000004}
-  m_Layer: 12
-  m_Name: Keys
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &47000004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 47000003}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.514562, y: -0.47759768, z: -0.16263823}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1476313}
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &131591235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8245,7 +8208,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1738368078924958250, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1738368078924958250, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8787,7 +8750,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1049433257
 PrefabInstance:
@@ -22262,83 +22225,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3105960093488984001, guid: b5a2844fa344022429292031f9eb0401, type: 3}
   m_PrefabInstance: {fileID: 1585948627}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1692168900
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 47000004}
-    m_Modifications:
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6.96
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.87
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599738043956665755, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: itemDesc
-      value: Opens the door to the Bio Lab
-      objectReference: {fileID: 0}
-    - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: itemName
-      value: BioLabKey
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901292142662581632, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_Name
-      value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 6901292142662581632, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
-      propertyPath: m_Layer
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
 --- !u!1001 &1774771293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22511,7 +22397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6452674023878226965, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6452674023878226965, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_LocalPosition.x
