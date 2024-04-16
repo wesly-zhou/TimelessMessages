@@ -45,4 +45,28 @@ public class InventoryManager : MonoBehaviour
             itemSlot[i].itemSelected = false;
         }
     }
+
+    public bool CheckItem(string itemName) 
+    {
+         if (itemSlot == null)
+        {
+            // Debug.LogError("ItemSlot array not initialized!");
+            return false;
+        }
+        
+        for (int i = 0; i < itemSlot.Length; i++) {
+            if (itemSlot[i] == null)
+            {
+                // Debug.LogError("An item slot is null at index " + i);
+                continue; // Skip this iteration if the item slot is null
+            }
+
+            if(itemSlot[i].occupied == true){
+                if (itemSlot[i].itemName == itemName) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

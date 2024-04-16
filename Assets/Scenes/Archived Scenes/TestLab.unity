@@ -17044,6 +17044,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &477553140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+  m_PrefabInstance: {fileID: 624226198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &532513801
 GameObject:
   m_ObjectHideFlags: 0
@@ -37339,9 +37344,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1371833666}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
-      propertyPath: director
+      propertyPath: textBubble
       value: 
-      objectReference: {fileID: 1019251273}
+      objectReference: {fileID: 477553140}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
       value: RoomManager
@@ -37455,6 +37460,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 410874618}
+    - target: {fileID: 8892629663499291141, guid: a0ac74fead5b9bc4980c99f6f41daafc, type: 3}
+      propertyPath: scene
+      value: 
+      objectReference: {fileID: 168229050}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

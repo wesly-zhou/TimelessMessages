@@ -30,6 +30,8 @@ public class MonsterController : MonoBehaviour
         //     }
         //     // ParentState = transform.parent.parent.gameObject.activeInHierarchy;
         // }
+
+        
     }
 
    

@@ -14,10 +14,11 @@ public class RoomManager : MonoBehaviour
     public GameObject scene;
     private bool ParentState = true;  // Assuming the parent starts active
     public GameObject Enemy;
-    public GameObject Player;
+    // public GameObject Player;
     public GameObject textBubble;
     public PlayableDirector director;
     public GameObject UIButton;
+    public GameObject Player;
     // Turtorial Text for the monster puzzle
     [SerializeField]
     [TextArea]
@@ -135,7 +136,7 @@ public class RoomManager : MonoBehaviour
         
         
         // Wait for the director to finish
-        yield return new WaitForSeconds((float)director.duration);
+        if(director != null ) yield return new WaitForSeconds((float)director.duration);
         inDialogue = true;
         if (DialogueText.Length > 0){
             textBubble.SetActive(true);
@@ -164,5 +165,16 @@ public class RoomManager : MonoBehaviour
         // UIButton.SetActive(true);
         
     }
-    
+    // Create a function for outside to trigger the dialogue
+    public void TriggerDialogue()
+    {
+        if (DialogueText.Length > 0)
+            {
+                // Player face to camera
+            Player.GetComponentInChildren<Animator>().SetInteger("direction", 3);
+            if(UIButton != null) UIButton.SetActive(false);
+            PlayerMovement.moveable = false;
+            StartCoroutine(StartDialogue());
+            }
+    }
 }

@@ -16,8 +16,14 @@ public class Item : MonoBehaviour
 
     private InventoryManager inventoryManager;
 
+    public GameObject RoomManager;
+
     private void Start() {
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        if(inventoryManager.CheckItem(itemName))
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision) 
@@ -26,6 +32,13 @@ public class Item : MonoBehaviour
         {
             inventoryManager.AddItem(itemName, itemDesc, sprite);
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy() {
+        if (itemName == "TimeWatch" && RoomManager != null)
+        {
+            RoomManager.GetComponent<RoomManager>().TriggerDialogue();
         }
     }
 }

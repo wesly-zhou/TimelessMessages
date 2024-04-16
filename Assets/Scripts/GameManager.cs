@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
         {"TestChemLab", 0},
         {"ChemLab", 0},
         {"SecurityRoom", 0},
-        {"BioLab", 0}
+        {"BioLab", 0},
+        {"PuzzleOne", 0}
     };
 
 // ------------------------------- Last Room --------------------------------
@@ -35,7 +36,8 @@ public class GameManager : MonoBehaviour
         {"TestChemLab", false},
         {"ChemLab", false},
         {"SecurityRoom", false},
-        {"BioLab", false}
+        {"BioLab", false},
+        {"PuzzleOne", false}
     };
     void Start()
     {
