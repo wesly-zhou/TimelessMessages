@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
+using TMPro;
 
 public class TimeController : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class TimeController : MonoBehaviour
     // public float speed2;
     private static bool setupTime = true;
     public GameObject Enemy;
+    public TextMeshProUGUI timerText;
+    public static float remainingTime = 1220;
+
     void Start()
     {
         transitionTime = 0;
@@ -59,6 +63,14 @@ public class TimeController : MonoBehaviour
     }
 
     void Update() {
+        if (isPresent && remainingTime > 0)
+            remainingTime -= Time.deltaTime;
+        else if (isPresent && remainingTime < 0)
+            remainingTime = 0;
+        int minutes = Mathf.FloorToInt(remainingTime / 60);
+        int seconds = Mathf.FloorToInt(remainingTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
         if (startTransition1){
             transitionTime += Time.deltaTime;
             float lerpFactor = transitionTime / duration;
