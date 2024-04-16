@@ -8635,6 +8635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ec74020c2c003348bbfe0dfa1c74e31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &797385773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5447280357352202154, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 1774771293}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &818390766
 GameObject:
   m_ObjectHideFlags: 0
@@ -22252,6 +22257,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 00:00
       objectReference: {fileID: 0}
+    - target: {fileID: 5447280357352202154, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5813138654251916448, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -22351,13 +22360,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1822329337824940823, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1774771299}
   m_SourcePrefab: {fileID: 100100000, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
 --- !u!1 &1774771294 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1822329337824940823, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
   m_PrefabInstance: {fileID: 1774771293}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1774771299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774771294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce6efdb61e3b46348af5508d0932c2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTravelButton: {fileID: 797385773}
 --- !u!1001 &1828402182
 PrefabInstance:
   m_ObjectHideFlags: 0
