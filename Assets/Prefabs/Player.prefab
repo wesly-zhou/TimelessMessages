@@ -821,8 +821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  runSpeed: 8
-  jumpSpeed: 12
+  runSpeed: 7
+  jumpSpeed: 13
   groundCheck: {fileID: 6479897757579078295}
   groundCheckRadius: 0.2
   groundLayer:
