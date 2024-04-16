@@ -14,6 +14,11 @@ public class ShowTimeTravelButton : MonoBehaviour
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
         if(!hasTimeWatch)
             timeTravelButton.SetActive(false);
+        else
+        {
+            timeTravelButton.SetActive(true);
+            // timeTravelButton.GetComponent<Animator>().SetTrigger("Sparking");
+        }
     }
 
     // Update is called once per frame
