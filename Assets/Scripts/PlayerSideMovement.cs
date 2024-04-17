@@ -19,7 +19,7 @@ public class PlayerSideMovement : MonoBehaviour
         player = GetComponent<Rigidbody2D>();
     }
 
-	void Update() {
+	void FixedUpdate() {
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
 		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
