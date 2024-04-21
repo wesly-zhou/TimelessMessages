@@ -18,7 +18,8 @@ public class GameManager : MonoBehaviour
         {"BioLab", 0},
         {"PuzzleOne", 0},
         {"TestLaserLevel1", 0},
-        {"TestLaserLevel2", 0}
+        {"TestLaserLevel2", 0},
+        {"TestInvisibleRoad", 0}
 
 
     };
