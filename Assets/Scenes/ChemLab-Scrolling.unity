@@ -136,6 +136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1498882554}
     - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: presentMap
       value: 
       objectReference: {fileID: 1666506492}

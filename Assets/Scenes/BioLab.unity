@@ -15660,6 +15660,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 756059408}
     - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: duration
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 25304107}

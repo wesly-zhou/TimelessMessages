@@ -49,7 +49,7 @@ public class TimeController : MonoBehaviour
 
     public IEnumerator TimeTravel() 
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(duration);
         isPresent = !isPresent;
         if (isPresent) {
             presentMap.SetActive(true);
@@ -130,7 +130,7 @@ public class TimeController : MonoBehaviour
 
 
     private IEnumerator Waiting(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(duration);
         
     }
 
