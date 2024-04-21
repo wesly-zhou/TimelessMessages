@@ -9705,6 +9705,9 @@ MonoBehaviour:
   EmissionPoint: {fileID: 2245916172420790979}
   startVFX: {fileID: 4619767448697643692}
   endVFX: {fileID: 7262637017850688631}
+  Rotation: 0
+  RotationPeriod: 0
+  RotationAngle: 0
 --- !u!1 &3319299358407521027
 GameObject:
   m_ObjectHideFlags: 0
@@ -9775,9 +9778,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -671701359
+  m_SortingLayer: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19585,7 +19588,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8315903709791726512}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

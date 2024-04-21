@@ -23527,28 +23527,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: runSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: jumpForce
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: jumpSpeed
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: groundCheckRadius
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 32768
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_RootOrder

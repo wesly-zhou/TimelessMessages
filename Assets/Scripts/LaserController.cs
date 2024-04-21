@@ -3,18 +3,28 @@ using System.Collections.Generic;
 // using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LaserController : MonoBehaviour
 {
     private LineRenderer linerenderer;
+    private float time;
+    private float InitAngle;
     [SerializeField] private ParticleSystem EmissionPoint;
     [SerializeField] private GameObject startVFX;
     [SerializeField] private GameObject endVFX;
+    // Control the rotation of the Launcher
+    [SerializeField] private bool Rotation;
+    [SerializeField] private float RotationPeriod;
+    [SerializeField] private float RotationAngle;
+    
     // Start is called before the first frame update
     void Start()
     {
         linerenderer = GetComponentInChildren<LineRenderer>();
+        linerenderer.enabled = true;
         linerenderer.SetPosition(1, new Vector3(1, 0, 0));
+        InitAngle = transform.rotation.eulerAngles.z;
     }
 
     // Update is called once per frame
@@ -22,6 +32,8 @@ public class LaserController : MonoBehaviour
     {
         UpdateStartPosition();
         UpdateEndPosition();
+        if (Rotation) RotateLauncher();
+        
     }
 
     private void UpdateStartPosition()
@@ -45,6 +57,10 @@ public class LaserController : MonoBehaviour
         if (hit) {
             length = (hit.point - StartPosition).magnitude;
             laserEndRotation = hit.transform.rotation.eulerAngles.z;
+            if(hit.transform.gameObject.name.Equals("Player")){
+                GameManager.DeathNum[SceneManager.GetActiveScene().name] += 1;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
         }
         
         // linerenderer.SetPosition(1, new Vector3(length, 0, 0));
@@ -56,5 +72,13 @@ public class LaserController : MonoBehaviour
         linerenderer.SetPosition(1, endVFX.transform.position);
 
         
+    }
+
+    private void RotateLauncher()
+    {
+        if(RotationPeriod == 0) return;
+        time += Time.deltaTime; 
+        float angle = RotationAngle * Mathf.Sin(2 * Mathf.PI * time / RotationPeriod); 
+        transform.rotation = Quaternion.Euler(0, 0, InitAngle + angle);
     }
 }

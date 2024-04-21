@@ -16,7 +16,11 @@ public class GameManager : MonoBehaviour
         {"ChemLab", 0},
         {"SecurityRoom", 0},
         {"BioLab", 0},
-        {"PuzzleOne", 0}
+        {"PuzzleOne", 0},
+        {"TestLaserLevel1", 0},
+        {"TestLaserLevel2", 0}
+
+
     };
 
 // ------------------------------- Last Room --------------------------------
