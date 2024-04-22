@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class TimeController : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class TimeController : MonoBehaviour
     public GameObject Enemy;
     public TextMeshProUGUI timerText;
     public static float remainingTime = 1220;
+    public Volume volume;
 
     void Start()
     {
@@ -40,10 +42,13 @@ public class TimeController : MonoBehaviour
         if (isPresent) {
             presentMap.SetActive(true);
             pastMap.SetActive(false);
+            volume.enabled = false;
+
         }
         else {
             pastMap.SetActive(true);
             presentMap.SetActive(false);
+            volume.enabled = true;
         }
     }
 
@@ -54,10 +59,13 @@ public class TimeController : MonoBehaviour
         if (isPresent) {
             presentMap.SetActive(true);
             pastMap.SetActive(false);
+            volume.enabled = false;
+
         }
         else {
             pastMap.SetActive(true);
             presentMap.SetActive(false);
+            volume.enabled = true;
         }
         startTransition2 = true;
     }
