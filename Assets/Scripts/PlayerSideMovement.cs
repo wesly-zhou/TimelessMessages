@@ -14,12 +14,14 @@ public class PlayerSideMovement : MonoBehaviour
     public bool isTouchingGround;
     public float fallMultiplier = 2.5f;
     public float lowJumpMultiplier = 2f;
+    private Animator playerAnimation;
 
     void Start() {
         player = GetComponent<Rigidbody2D>();
+        playerAnimation = GetComponentInChildren<Animator>();
     }
 
-	void FixedUpdate() {
+	void Update() {
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
 		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
@@ -39,6 +41,8 @@ public class PlayerSideMovement : MonoBehaviour
             player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
             player.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
+        playerAnimation.SetBool("OnGround", isTouchingGround);
 	}
 
 	private void Turn()
