@@ -309,6 +309,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &272555046 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5808477784640082754, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 272555044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &272555047 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5454799451334132629, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 272555044}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &384379821
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -370,6 +392,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+--- !u!20 &384379822 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3864126938701631255, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+  m_PrefabInstance: {fileID: 384379821}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &522086897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19980,9 +20007,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: pastMap
+      value: 
+      objectReference: {fileID: 1917145049}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: timerIcon
+      value: 
+      objectReference: {fileID: 272555047}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: timerText
       value: 
       objectReference: {fileID: 272555045}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: Maincamera
+      value: 
+      objectReference: {fileID: 384379822}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: presentMap
+      value: 
+      objectReference: {fileID: 1605925952}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: TimeLeapVFX
+      value: 
+      objectReference: {fileID: 1921013149}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: cooldownText
+      value: 
+      objectReference: {fileID: 272555046}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: timerCooldown
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7309363171278790973, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: m_Name
       value: GameHandler
@@ -40010,7 +40065,7 @@ GameObject:
   - component: {fileID: 1605925954}
   - component: {fileID: 1605925953}
   m_Layer: 10
-  m_Name: PRESENT
+  m_Name: PresentBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53469,7 +53524,7 @@ GameObject:
   - component: {fileID: 1917145051}
   - component: {fileID: 1917145050}
   m_Layer: 10
-  m_Name: PAST
+  m_Name: PastBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53569,6 +53624,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
+--- !u!1 &1921013149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8418720747102702701, guid: 4d6bff83edf2be94188fa16b7d4ef99d, type: 3}
+  m_PrefabInstance: {fileID: 1921013148}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2053143232
 GameObject:
   m_ObjectHideFlags: 0

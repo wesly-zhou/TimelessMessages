@@ -140,6 +140,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: timerIcon
+      value: 
+      objectReference: {fileID: 1419099560}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: presentMap
       value: 
       objectReference: {fileID: 1666506492}
@@ -147,6 +151,14 @@ PrefabInstance:
       propertyPath: TimeLeapVFX
       value: 
       objectReference: {fileID: 711058125}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: cooldownText
+      value: 
+      objectReference: {fileID: 1419099559}
+    - target: {fileID: 3053145408087295514, guid: d24def94ff6983c40aba662ae8202733, type: 3}
+      propertyPath: timerCooldown
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7309363171278790973, guid: d24def94ff6983c40aba662ae8202733, type: 3}
       propertyPath: m_Name
       value: GameHandler
@@ -14090,6 +14102,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+--- !u!114 &1419099559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5808477784640082754, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 1419099558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1419099560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5454799451334132629, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 1419099558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1421532892
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 8406277801421197516}
   - component: {fileID: 1162359088667804050}
   - component: {fileID: 3053145408087295514}
-  m_Layer: 12
+  m_Layer: 9
   m_Name: GameHandler
   m_TagString: GameHandler
   m_Icon: {fileID: 0}
@@ -112,7 +112,10 @@ MonoBehaviour:
   TimeLeapVFX: {fileID: 0}
   material: {fileID: 2100000, guid: 96c06fa402043f44ea0a8209df68a8f1, type: 2}
   Maincamera: {fileID: 0}
-  duration: 2
+  duration: 1.5
   Enemy: {fileID: 0}
   timerText: {fileID: 0}
   volume: {fileID: 5329191160454404570}
+  timerIcon: {fileID: 0}
+  cooldownText: {fileID: 0}
+  timerCooldown: 10
