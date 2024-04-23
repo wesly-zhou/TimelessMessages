@@ -23377,14 +23377,16 @@ PrefabInstance:
     - target: {fileID: 4829392018145155586, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c41b983d9e3a1714b9144f0b5d9a8df8, type: 3}
+      objectReference: {fileID: 21300000, guid: e09b2d2e2c01904419d929aa82e58c8a, type: 3}
     - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c41b983d9e3a1714b9144f0b5d9a8df8, type: 3}
+      objectReference: {fileID: 21300000, guid: e09b2d2e2c01904419d929aa82e58c8a, type: 3}
     - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: itemDesc
-      value: ???
+      value: Refer to the records of recent maintenance activities. Changes made
+        to the lab environment could be significant. Trace back to the earliest signs
+        of disturbance.
       objectReference: {fileID: 0}
     - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: itemName
