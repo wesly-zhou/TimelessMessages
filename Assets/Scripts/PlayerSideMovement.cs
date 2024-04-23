@@ -41,7 +41,7 @@ public class PlayerSideMovement : MonoBehaviour
             player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
             player.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
+        playerAnimation.SetFloat("Speed", Mathf.Abs(hMove.x));
         playerAnimation.SetBool("OnGround", isTouchingGround);
 	}
 
