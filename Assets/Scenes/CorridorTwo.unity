@@ -18045,6 +18045,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2486462136452573008, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486462136452573008, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486462136452573008, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639816134320036990, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_Name
+      value: CloseButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5692063844578719756, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: isPaused
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5813138654251916448, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -18141,6 +18161,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 764899502}
+    - target: {fileID: 6181624939240325687, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6181624939240325687, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6310145930781936794, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1774771300}
+    - target: {fileID: 6310145930781936794, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeSettings
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18177,6 +18213,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1774771300 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5692063844578719756, guid: 4d8dabd92b733b5428deb3f991945d7b, type: 3}
+  m_PrefabInstance: {fileID: 1774771293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2856a86479c44354b8177c354d92866e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1898061749
