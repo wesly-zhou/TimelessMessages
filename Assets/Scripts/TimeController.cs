@@ -193,4 +193,8 @@ public class TimeController : MonoBehaviour
             }
         }
     }
+
+    public void reduceCooldown() {
+        currentCooldown -= 5;
+    }
 }
