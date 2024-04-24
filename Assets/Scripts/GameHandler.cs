@@ -25,6 +25,10 @@ public class GameHandler : MonoBehaviour
         introLoaded = true;
     }
 
+    public void CreditsMain() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void Credits() {
         SceneManager.LoadScene("Credits");
     }
