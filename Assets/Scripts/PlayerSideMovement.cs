@@ -7,6 +7,7 @@ public class PlayerSideMovement : MonoBehaviour
     public Rigidbody2D player;
 	private bool faceRight = true;  // determine which way player is facing.
 	public float runSpeed = 7f;
+    private float direction = 0f;
     public float jumpSpeed = 11f;
     public Transform groundCheck;
     public float groundCheckRadius;
@@ -21,14 +22,22 @@ public class PlayerSideMovement : MonoBehaviour
         playerAnimation = GetComponentInChildren<Animator>();
     }
 
-	void Update() {
+    void Update() {
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-		//Horizontal axis: [a]/left arrow is -1, [d]/right arrow is 1
-		Vector3 hMove = new Vector3(Input.GetAxis ("Horizontal"), 0.0f, 0.0f );
-		transform.position = transform.position + hMove * runSpeed * Time.deltaTime;
+        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isTouchingGround)
+            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+        playerAnimation.SetBool("OnGround", isTouchingGround);
+    }
 
-		// if input is moving player right and player faces left, turn, and vice-versa
-		if ((hMove.x < 0 && faceRight) || (hMove.x > 0 && !faceRight))
+	void FixedUpdate() {
+        isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+		direction = Input.GetAxis("Horizontal");
+		if (direction != 0f)
+            player.velocity = new Vector2(direction * runSpeed, player.velocity.y);
+        else 
+            player.velocity = new Vector2(0, player.velocity.y);
+
+		if ((direction < 0 && faceRight) || (direction > 0 && !faceRight))
         {
 			Turn();
 		}
@@ -41,8 +50,7 @@ public class PlayerSideMovement : MonoBehaviour
             player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
             player.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        playerAnimation.SetFloat("Speed", Mathf.Abs(hMove.x));
-        playerAnimation.SetBool("OnGround", isTouchingGround);
+        playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
 	}
 
 	private void Turn()
