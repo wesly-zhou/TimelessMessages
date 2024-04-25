@@ -100,6 +100,10 @@ public class LaserController : MonoBehaviour
                 linerenderer.positionCount++;
                 linerenderer.SetPosition(++i, endVFX.transform.position);
                 // break;
+                if (hit.transform.gameObject.tag == "Reciever") {
+                    // Logic for the reciever(win the game, show hidden object, etc.)
+                    Destroy(hit.transform.gameObject);
+                }
             }
             // Hit the object that is reflectable
             else {
