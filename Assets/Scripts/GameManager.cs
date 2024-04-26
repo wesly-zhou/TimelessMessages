@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
         {"PuzzleOne", 0},
         {"TestLaserLevel1", 0},
         {"TestLaserLevel2", 0},
-        {"TestInvisibleRoad", 0}
-
+        {"TestInvisibleRoad", 0},
+        {"TestMap", 0}
 
     };
 
@@ -42,7 +42,9 @@ public class GameManager : MonoBehaviour
         {"ChemLab", false},
         {"SecurityRoom", false},
         {"BioLab", false},
-        {"PuzzleOne", false}
+        {"PuzzleOne", false},
+        {"TestMap", false}
+
     };
     void Start()
     {
