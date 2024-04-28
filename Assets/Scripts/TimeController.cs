@@ -33,6 +33,7 @@ public class TimeController : MonoBehaviour
     public static float timerCooldown = 5f;
     private static bool onCooldown = false;
     private static float currentCooldown;
+    public GameObject instruction;
 
     void Start()
     {
@@ -41,6 +42,8 @@ public class TimeController : MonoBehaviour
         transitionTime = 0;
         material = TimeLeapVFX.GetComponent<SpriteRenderer>().material;
         spriteRenderer = TimeLeapVFX.GetComponent<SpriteRenderer>();
+
+        
         Maincamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         if (isPresent) {
             presentMap.SetActive(true);
@@ -148,6 +151,8 @@ public class TimeController : MonoBehaviour
     }
 
     public void OnbuttonClick() {
+        instruction.SetActive(false);
+
         if (setupTime && !onCooldown)
         {   
             print("Start1: " + startTransition1);
