@@ -30,7 +30,7 @@ public class TimeController : MonoBehaviour
 
     public Image timerIcon;
     public Text cooldownText;
-    public static float timerCooldown = 15f;
+    public static float timerCooldown = 5f;
     private static bool onCooldown = false;
     private static float currentCooldown;
 
@@ -161,6 +161,7 @@ public class TimeController : MonoBehaviour
             print("player moveable: " + PlayerMovement.moveable);
             if(Enemy != null){
                 Enemy.GetComponent<AIPath>().canMove = false;
+                Enemy.GetComponentInChildren<Animator>().speed = 0;
             }
             usedTimeLeap = true;
             startTransition1 = true;

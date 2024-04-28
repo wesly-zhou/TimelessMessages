@@ -7,10 +7,11 @@ public class MonsterController : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool ParentState = true;  // Assuming the parent starts active
-
+    private Animator animator;
     void Start()
     {
         // Debug.Log(transform.parent.parent.name);
+        animator = GameObject.Find("Monster_Art").GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,6 +41,8 @@ public class MonsterController : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             GetComponentInParent<AIPath>().canMove = true;
+            animator.SetBool("isMoving", true);
+            animator.speed = 1.2f;
             Debug.Log("Player Enter the Alert Zone");
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             GetComponentInParent<AIDestinationSetter>().enabled = true;
@@ -55,6 +58,8 @@ public class MonsterController : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             GetComponentInParent<AIDestinationSetter>().enabled = true;
             GetComponentInParent<AIPath>().canMove = true;
+            animator.SetBool("isMoving", true);
+            animator.speed = 1.2f;
         }
     }
 
