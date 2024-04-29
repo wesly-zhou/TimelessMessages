@@ -23452,10 +23452,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1209975684}
     m_Modifications:
+    - target: {fileID: 3199120668104645589, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199120668104645589, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3199120668104645589, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4008476575519899618, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
       propertyPath: m_Name
       value: Battery
       objectReference: {fileID: 0}
+    - target: {fileID: 4034967171413058751, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 13aae2014f19459479af0a2d91aa3dbb, type: 3}
     - target: {fileID: 8961732522600763162, guid: ecbc1b93473dee0478666e74be1b4992, type: 3}
       propertyPath: m_RootOrder
       value: -1

@@ -33,6 +33,8 @@ public class TimeController : MonoBehaviour
     public static float timerCooldown = 5f;
     private static bool onCooldown = false;
     private static float currentCooldown;
+
+    //add
     public GameObject instruction;
 
     void Start()
@@ -151,7 +153,7 @@ public class TimeController : MonoBehaviour
     }
 
     public void OnbuttonClick() {
-        instruction.SetActive(false);
+        
 
         if (setupTime && !onCooldown)
         {   
@@ -177,6 +179,11 @@ public class TimeController : MonoBehaviour
             TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
             StartCoroutine(TimeTravel());
             // transitionTime = 0;
+            if (instruction != null) {
+                instruction.SetActive(false);
+            } else {
+                Debug.LogWarning("Instruction object not assigned in this scene.");
+            }
         }
     }
 
