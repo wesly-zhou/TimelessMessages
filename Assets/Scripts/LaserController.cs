@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
@@ -16,6 +17,7 @@ public class LaserController : MonoBehaviour
     private float time;
     private float InitAngle;
     private Vector2 StartPosition;
+    public LayerMask layerMask;
     [SerializeField] private ParticleSystem EmissionPoint;
     [SerializeField] private GameObject startVFX;
     [SerializeField] private GameObject endVFX;
@@ -27,13 +29,14 @@ public class LaserController : MonoBehaviour
     [SerializeField] private float colorIntensity = 4.3f;
     [SerializeField] private float thickness = 9;
     [SerializeField] private float noiseScale = 1f;
-    [SerializeField] private float enhance = 1f;
+    [SerializeField] private float enhance = 3f;
 
 
     // Start is called before the first frame update
     
     void Start()
     {
+        layerMask  = ~LayerMask.GetMask("IgnoreLaser");
         linerenderer = GetComponentInChildren<LineRenderer>();
         linerenderer.enabled = true;
         linerenderer.material.color = color * colorIntensity;
@@ -42,6 +45,7 @@ public class LaserController : MonoBehaviour
         ParticleSystem[] particles = GetComponentsInChildren<ParticleSystem>();
         foreach (ParticleSystem particle in particles) {
             Renderer rend = particle.GetComponent<Renderer>();
+            // rend.material.SetColor("_BaseColor", color * colorIntensity);
             rend.material.SetColor("_EmissionColor", color * (colorIntensity + enhance));
         }
         // linerenderer.SetPosition(1, new Vector3(1, 0, 0));
@@ -78,7 +82,7 @@ public class LaserController : MonoBehaviour
         linerenderer.positionCount = 1;
         int i = 0;
         Vector2 curPosition = StartPosition;
-        RaycastHit2D hit = Physics2D.Raycast(curPosition, direction.normalized);
+        RaycastHit2D hit = Physics2D.Raycast(curPosition, direction.normalized, length, layerMask);
 
         while (hit.collider != null && i < 100) {
             // Hit the player
@@ -104,18 +108,28 @@ public class LaserController : MonoBehaviour
                     // Logic for the reciever(win the game, show hidden object, etc.)
                     Destroy(hit.transform.gameObject);
                 }
+                if (hit.transform.gameObject.tag == "Mirror") {
+                    // Logic for the mirror(win the game, show hidden object, etc.)
+                    hit.transform.gameObject.GetComponentInChildren<HittedAndLight>().Hitted();
+                    // Debug.Log("Hit the mirror");
+                }
             }
             // Hit the object that is reflectable
             else {
                 // reflectLaser(StartPosition, direction, hit);
                 // endVFX.SetActive(false);
+                if (hit.transform.gameObject.tag == "Mirror") {
+                    // Logic for the mirror(win the game, show hidden object, etc.)
+                    hit.transform.gameObject.GetComponentInChildren<HittedAndLight>().Hitted();
+                    // Debug.Log("Hit the mirror");
+                }
                 curPosition = hit.point;
                 linerenderer.positionCount++;
                 linerenderer.SetPosition(++i, curPosition);
                 Vector2 normal = hit.normal;
                 direction = Vector2.Reflect(direction.normalized, normal);
                 
-                hit = Physics2D.Raycast(curPosition + 0.01f*direction, direction, 1000f);
+                hit = Physics2D.Raycast(curPosition + 0.01f*direction, direction, 1000f, layerMask);
                 Debug.DrawLine(curPosition, curPosition + direction * 100f, Color.red);
             }
         }
@@ -151,7 +165,7 @@ public class LaserController : MonoBehaviour
         int i = 1;
         // linerenderer.positionCount = 2;
         // linerenderer.SetPosition(i, curPosition);
-        RaycastHit2D hit = Physics2D.Raycast(curPosition + direction * 0.01f, direction, 1000f);
+        RaycastHit2D hit = Physics2D.Raycast(curPosition + direction * 0.01f, direction, 1000f, layerMask);
         while (hit.collider != null && i < 100) {
             
             if (hit.transform.gameObject.layer != LayerMask.NameToLayer("Reflectable")) {
@@ -166,7 +180,7 @@ public class LaserController : MonoBehaviour
             // Reflect the laser
             
             // curPosition += direction.normalized * 0.01f;
-            hit = Physics2D.Raycast(curPosition + direction * 0.01f, direction.normalized, 100f); 
+            hit = Physics2D.Raycast(curPosition + direction * 0.01f, direction.normalized, 100f, layerMask); 
             
         }
         // linerenderer.positionCount++;

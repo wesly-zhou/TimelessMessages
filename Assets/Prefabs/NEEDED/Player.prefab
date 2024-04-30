@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 8925060210298525200}
   - component: {fileID: 5565488614798328288}
   m_Layer: 9
-  m_Name: Light
+  m_Name: ViewField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,11 +568,11 @@ SpriteMask:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_MaskAlphaCutoff: 0.297
-  m_FrontSortingLayerID: -1074337023
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 3
-  m_BackSortingLayer: 0
+  m_MaskAlphaCutoff: 0.212
+  m_FrontSortingLayerID: -1231315173
+  m_BackSortingLayerID: -671701359
+  m_FrontSortingLayer: 2
+  m_BackSortingLayer: 1
   m_FrontSortingOrder: 10
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
@@ -735,6 +735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5528344096177407484}
   - component: {fileID: 3914349286511689649}
+  - component: {fileID: 7777216932121942924}
   m_Layer: 9
   m_Name: FootCollider
   m_TagString: Untagged
@@ -802,6 +803,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9918678, y: 0.3238411}
   m_EdgeRadius: 0
+--- !u!114 &7777216932121942924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5697657612740646927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86d57c282d523ad49bbe207219feebd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5945609467717351360
 GameObject:
   m_ObjectHideFlags: 0

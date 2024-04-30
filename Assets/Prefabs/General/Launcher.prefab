@@ -9702,12 +9702,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba2d2edf5e65be4594e1cbd85493339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadly: 0
   EmissionPoint: {fileID: 2245916172420790979}
   startVFX: {fileID: 4619767448697643692}
   endVFX: {fileID: 7262637017850688631}
   Rotation: 0
   RotationPeriod: 0
   RotationAngle: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
+  colorIntensity: 4.3
+  thickness: 9
+  noiseScale: 1
+  enhance: 1
 --- !u!1 &3319299358407521027
 GameObject:
   m_ObjectHideFlags: 0
