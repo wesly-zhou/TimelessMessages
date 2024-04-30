@@ -30,7 +30,7 @@ public class TimeController : MonoBehaviour
 
     public Image timerIcon;
     public Text cooldownText;
-    public static float timerCooldown = 5f;
+    public static float timerCooldown = 9f;
     private static bool onCooldown = false;
     private static float currentCooldown;
 
@@ -211,6 +211,6 @@ public class TimeController : MonoBehaviour
     }
 
     public void reduceCooldown() {
-        currentCooldown -= 5;
+        currentCooldown -= 3;
     }
 }
