@@ -25,7 +25,7 @@ public class TimeController : MonoBehaviour
     private static bool setupTime = true;
     public GameObject Enemy;
     public TextMeshProUGUI timerText;
-    public static float remainingTime = 1220;
+    public static float remainingTime = 915;
     public Volume volume;
 
     public Image timerIcon;
