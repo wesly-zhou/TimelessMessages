@@ -22,6 +22,7 @@ public class FallDetect : MonoBehaviour
             return;
         }
         else{
+            PlayerController.justDied = true;
             GameManager.DeathNum[UnityEngine.SceneManagement.SceneManager.GetActiveScene().name]++;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
