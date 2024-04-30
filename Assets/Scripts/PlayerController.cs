@@ -90,6 +90,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         // PlayerPrefs.GetInt(SceneManager.GetActiveScene().name, 0);
+        RoomManager = GameObject.Find("RoomManager");
     }
 
     // Update is called once per frame

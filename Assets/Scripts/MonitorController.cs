@@ -73,6 +73,7 @@ public class MonitorController : MonoBehaviour
             MoniorPanel.SetActive(true);
             isMonitorOpen = true;
             PlayerMovement.moveable = false;
+            Debug.Log("Issue 5");
             GameObject.FindGameObjectWithTag("UI").SetActive(false);
         }
         else if(isNearMonitor && Input.GetKeyDown(KeyCode.F) && !isMonitorOpen && TimeController.isPresent == true)

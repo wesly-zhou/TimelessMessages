@@ -111,6 +111,7 @@ public class TimeController : MonoBehaviour
         // When timeleap to a new scene 
         if (startTransition2 && usedTimeLeap){
             PlayerMovement.moveable = false;
+            Debug.Log("Issue 3");
             // Set Enemy state
             if(Enemy != null){
                 // Enemy.GetComponent<AIPath>().canMove = false;
@@ -136,6 +137,7 @@ public class TimeController : MonoBehaviour
                 TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = false;
                 setupTime = true;
                 PlayerMovement.moveable = true;
+                Debug.Log("Issue get solved 3");
             //     if(Enemy != null){
             //     Enemy.GetComponent<AIPath>().canMove = true;
             // }
@@ -165,6 +167,7 @@ public class TimeController : MonoBehaviour
             transitionTime = 0;
             GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>().SetInteger("direction", 3);
             PlayerMovement.moveable = false;
+            Debug.Log("Issue 4");
             print("player moveable: " + PlayerMovement.moveable);
             if(Enemy != null){
                 Enemy.GetComponent<AIPath>().canMove = false;

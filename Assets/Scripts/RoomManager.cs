@@ -40,11 +40,15 @@ public class RoomManager : MonoBehaviour
     
     void Awake()
     {
+        Debug.Log("-------AWAKE---------" + PlayerMovement.moveable);
+
         // Get the information that if the current scene have played the director
         SceneAnim = GameManager.SceneAnim[SceneManager.GetActiveScene().name];
+        PlayerMovement.moveable = true;
     }
     void Start()
     {
+        Debug.Log("-------START---------" + PlayerMovement.moveable);
         // LastRoom = GameManager.LastRoom;
         if(SceneAnim || SceneManager.GetActiveScene().name == "SecurityRoom") 
             return;
@@ -55,6 +59,7 @@ public class RoomManager : MonoBehaviour
             {
                 if(UIButton != null) UIButton.SetActive(false);
                 PlayerMovement.moveable = false;
+                Debug.Log("Issue 1");
                 director.Play();
                 if (DialogueText.Length > 0)
                 {
@@ -73,6 +78,7 @@ public class RoomManager : MonoBehaviour
         // The logic of dialogue
         if (Input.GetKeyDown(KeyCode.E) && inDialogue)
         {
+            Debug.Log("E is pressed! Enter the next dialogue");
             if (!showNext)
             {
                 // textBubble.GetComponentInChildren<Text>().text = "";
@@ -91,6 +97,7 @@ public class RoomManager : MonoBehaviour
             {
                 textBubble.SetActive(false);
                 PlayerMovement.moveable = true;
+                Debug.Log("Issue get solved 1");
                 UIButton.SetActive(true);
                 inDialogue = false;
             }
@@ -136,7 +143,10 @@ public class RoomManager : MonoBehaviour
         
         
         // Wait for the director to finish
-        if(director != null ) yield return new WaitForSeconds((float)director.duration);
+        if(director != null && !SceneAnim) {
+            Debug.Log("Waiting for Director Duration and enter dialogue: " + (float)director.duration);
+            yield return new WaitForSeconds((float)director.duration);
+            }
         inDialogue = true;
         if (DialogueText.Length > 0){
             textBubble.SetActive(true);
@@ -159,6 +169,14 @@ public class RoomManager : MonoBehaviour
             // }
             
         }
+        else
+        {
+            inDialogue = false;
+            textBubble.SetActive(false);
+            PlayerMovement.moveable = true;
+            Debug.Log("Issue get solved 2");
+            UIButton.SetActive(true);
+        }
  
         // textBubble.SetActive(false);
         // PlayerMovement.moveable = true;
@@ -174,6 +192,7 @@ public class RoomManager : MonoBehaviour
             Player.GetComponentInChildren<Animator>().SetInteger("direction", 3);
             if(UIButton != null) UIButton.SetActive(false);
             PlayerMovement.moveable = false;
+            Debug.Log("Issue 2");
             StartCoroutine(StartDialogue());
             }
     }

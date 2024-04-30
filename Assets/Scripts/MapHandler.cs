@@ -26,6 +26,7 @@ public class MapHandler : MonoBehaviour
         gameObject.SetActive(true);
         MonitorView.SetActive(false);
         PlayerMovement.moveable = false;
+        Debug.Log("Issue 6");
         
     }
 
