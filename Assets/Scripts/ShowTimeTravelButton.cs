@@ -7,9 +7,12 @@ public class ShowTimeTravelButton : MonoBehaviour
     private InventoryManager inventoryManager;
     [SerializeField]
     private GameObject timeTravelButton;
-    private GameObject intruction;
+    // private GameObject intruction;
     private static bool hasTimeWatch = false;
     // Start is called before the first frame update
+
+    public GameObject instruction;
+    public static bool instruction_click = false;
     void Start()
     {
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
@@ -20,6 +23,10 @@ public class ShowTimeTravelButton : MonoBehaviour
             timeTravelButton.SetActive(true);
             // timeTravelButton.GetComponent<Animator>().SetTrigger("Sparking");
         }
+        if(instruction_click) 
+                {
+                    instruction.SetActive(false);
+                }
     }
 
     // Update is called once per frame
@@ -30,6 +37,9 @@ public class ShowTimeTravelButton : MonoBehaviour
                 timeTravelButton.SetActive(true);
                 timeTravelButton.GetComponent<Animator>().SetTrigger("Sparking");
                 hasTimeWatch = true;
+
+                
+                
         }
         
     }

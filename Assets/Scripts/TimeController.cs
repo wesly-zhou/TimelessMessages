@@ -183,6 +183,7 @@ public class TimeController : MonoBehaviour
             StartCoroutine(TimeTravel());
             // transitionTime = 0;
             if (instruction != null) {
+                ShowTimeTravelButton.instruction_click = true;
                 instruction.SetActive(false);
             } else {
                 Debug.LogWarning("Instruction object not assigned in this scene.");
