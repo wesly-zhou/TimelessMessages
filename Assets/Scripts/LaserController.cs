@@ -36,7 +36,9 @@ public class LaserController : MonoBehaviour
     
     void Start()
     {
-        layerMask  = ~LayerMask.GetMask("IgnoreLaser");
+        layerMask  |= LayerMask.GetMask("IgnoreLaser");
+        layerMask  |= LayerMask.GetMask("Player");
+        layerMask = ~layerMask;
         linerenderer = GetComponentInChildren<LineRenderer>();
         linerenderer.enabled = true;
         linerenderer.material.color = color * colorIntensity;
@@ -110,7 +112,7 @@ public class LaserController : MonoBehaviour
                 }
                 if (hit.transform.gameObject.tag == "Mirror") {
                     // Logic for the mirror(win the game, show hidden object, etc.)
-                    hit.transform.gameObject.GetComponentInChildren<HittedAndLight>().Hitted();
+                    hit.transform.gameObject.GetComponentInParent<HittedAndLight>().Hitted();
                     // Debug.Log("Hit the mirror");
                 }
             }
@@ -120,7 +122,7 @@ public class LaserController : MonoBehaviour
                 // endVFX.SetActive(false);
                 if (hit.transform.gameObject.tag == "Mirror") {
                     // Logic for the mirror(win the game, show hidden object, etc.)
-                    hit.transform.gameObject.GetComponentInChildren<HittedAndLight>().Hitted();
+                    hit.transform.gameObject.GetComponentInParent<HittedAndLight>().Hitted();
                     // Debug.Log("Hit the mirror");
                 }
                 curPosition = hit.point;

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameHandler : MonoBehaviour
 {
+    [SerializeField]
     private InventoryManager inventoryManager;
     public static bool introLoaded = false;
 
