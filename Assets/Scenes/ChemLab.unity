@@ -8210,6 +8210,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire2
       objectReference: {fileID: 0}
+    - target: {fileID: 4614544862591593955, guid: 964ef28421cf5814fa452c8e5f64a474, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614544862591593955, guid: 964ef28421cf5814fa452c8e5f64a474, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614544862591593955, guid: 964ef28421cf5814fa452c8e5f64a474, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6449248379111860662, guid: 964ef28421cf5814fa452c8e5f64a474, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -8426,6 +8438,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toxic Liquid 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8494,6 +8518,18 @@ PrefabInstance:
     - target: {fileID: 3047063473902935606, guid: 15051893897e4224992cd555708d4d18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7771717766812113997, guid: 15051893897e4224992cd555708d4d18, type: 3}
       propertyPath: m_Name
@@ -8644,6 +8680,18 @@ PrefabInstance:
     - target: {fileID: 1351703085801192151, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
       propertyPath: m_Name
       value: Toxic Liquid 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5111374401795659430, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22318,7 +22366,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.99215686, g: 0.6784314, b: 0.6784314, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -10, z: 0}
   m_Size: {x: 36, y: 34, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -22479,6 +22527,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4693816495804744261, guid: 15051893897e4224992cd555708d4d18, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7771717766812113997, guid: 15051893897e4224992cd555708d4d18, type: 3}
       propertyPath: m_Name
       value: Fire1
@@ -22596,6 +22656,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1940914544}
     m_Modifications:
+    - target: {fileID: 671676125965064806, guid: 0d94d0dbbc590364485e62e0bdf5fd60, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 671676125965064806, guid: 0d94d0dbbc590364485e62e0bdf5fd60, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 671676125965064806, guid: 0d94d0dbbc590364485e62e0bdf5fd60, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1177838844688771057, guid: 0d94d0dbbc590364485e62e0bdf5fd60, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -23339,11 +23411,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 0.447
       objectReference: {fileID: 0}
     - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.09
+      value: 0.119
       objectReference: {fileID: 0}
     - target: {fileID: 1536599088337296769, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_Name
@@ -31603,7 +31675,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.99215686, g: 0.6784314, b: 0.6784314, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -10, z: 0}
   m_Size: {x: 36, y: 34, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -45344,11 +45416,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.06
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.09
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 1536599088337296769, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_Name

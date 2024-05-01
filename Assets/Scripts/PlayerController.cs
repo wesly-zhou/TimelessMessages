@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     private int DeathNum;
-    private static bool justDied = false;
+    public static bool justDied = false;
     public GameObject RoomManager;
     public GameObject tutorialTextBubble;
     
@@ -22,26 +22,26 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
-    Debug.Log("Scene loaded: " + scene.name);
-    // On scene load, show the tutorial based on the death number of player
-    // Get the death number of player base on the current scene
-    int deathNum = GameManager.DeathNum[scene.name];
-    // switch(SceneManager.GetActiveScene().name){
-    //     case "TestLab":
-    //         deathNum = GameManager.TestLab;
-    //         break;
-    //     case "ChemLab":
-    //         deathNum = GameManager.ChemLab;
-    //         break;
-    //     case "SecurityRoom":    
-    //         deathNum = GameManager.SecurityRoom;
-    //         break;
-    //     case "BioLab":        
-    //         deathNum = GameManager.BioLab;
-    //         break;
+        Debug.Log("Scene loaded: " + scene.name);
+        // On scene load, show the tutorial based on the death number of player
+        // Get the death number of player base on the current scene
+        int deathNum = GameManager.DeathNum[scene.name];
+        // switch(SceneManager.GetActiveScene().name){
+        //     case "TestLab":
+        //         deathNum = GameManager.TestLab;
+        //         break;
+        //     case "ChemLab":
+        //         deathNum = GameManager.ChemLab;
+        //         break;
+        //     case "SecurityRoom":    
+        //         deathNum = GameManager.SecurityRoom;
+        //         break;
+        //     case "BioLab":        
+        //         deathNum = GameManager.BioLab;
+        //         break;
 
-    // }
-    ShowTutorial(deathNum);
+        // }
+        ShowTutorial(deathNum);
     }
 
     private void ShowTutorial(int deathNum) {

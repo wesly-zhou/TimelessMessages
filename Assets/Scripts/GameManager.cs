@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
         {"TestLaserLevel2", 0},
         {"TestInvisibleRoad", 0},
         {"TestMap", 0},
+        {"PuzzleTwo", 0},
+        {"PuzzleThree", 0},
+        {"PuzzleFour", 0},
         {"PuzzleFive", 0}
 
     };
