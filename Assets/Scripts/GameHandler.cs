@@ -44,7 +44,7 @@ public class GameHandler : MonoBehaviour
 
     public void OpenMenu() 
     {
-        inventoryManager.inventoryMenu.SetActive(true);
-        inventoryManager.closeButton.SetActive(true);
+        inventoryManager.OpenMenu();
+        // inventoryManager.closeButton.SetActive(true);
     }        
 }

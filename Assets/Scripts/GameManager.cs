@@ -24,7 +24,8 @@ public class GameManager : MonoBehaviour
         {"PuzzleTwo", 0},
         {"PuzzleThree", 0},
         {"PuzzleFour", 0},
-        {"PuzzleFive", 0}
+        {"PuzzleFive", 0},
+        {"TestFinalDoor", 0}
 
     };
 
