@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6452674023878226965}
   - component: {fileID: 1428191588393118566}
+  - component: {fileID: 3847966147819307025}
   m_Layer: 0
   m_Name: RoomManager
   m_TagString: Untagged
@@ -47,10 +48,10 @@ MonoBehaviour:
   DeathNum: 0
   scene: {fileID: 0}
   Enemy: {fileID: 0}
-  Player: {fileID: 0}
   textBubble: {fileID: 0}
   director: {fileID: 0}
   UIButton: {fileID: 0}
+  Player: {fileID: 0}
   TutorialText:
   - I have to distract that monster...
   - The timeleap watch may be useful...
@@ -58,3 +59,66 @@ MonoBehaviour:
   - Where am I ?
   - What happened for my lab ?
   - I must save everything...
+  PlayOnStart:
+  - ChemLab
+  - PuzzleOne
+  DialogueSession: 
+--- !u!114 &3847966147819307025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2644545472251009133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a0b31907e584a834084cfe8b9a03e8d0, type: 2}
+    - {fileID: 11400000, guid: 02fa64d6cd3cf6d47884bc3be2a8dfa6, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1428191588393118566}
+          m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+          m_MethodName: TriggerDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1428191588393118566}
+          m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+          m_MethodName: DisablePlayerMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1428191588393118566}
+          m_TargetAssemblyTypeName: RoomManager, Assembly-CSharp
+          m_MethodName: EnablePlayerMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

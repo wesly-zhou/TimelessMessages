@@ -8349,13 +8349,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
+      propertyPath: m_InitialState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_SceneBindings.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_SceneBindings.Array.data[3].key
       value: 
       objectReference: {fileID: 8878742318733224247, guid: 33565c180518d8f4e83dd766c7ea6391, type: 2}
+    - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].key
+      value: 
+      objectReference: {fileID: 9011688928329821597, guid: 33565c180518d8f4e83dd766c7ea6391, type: 2}
     - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_SceneBindings.Array.data[0].value
       value: 
@@ -8368,6 +8376,10 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[3].value
       value: 
       objectReference: {fileID: 252774753}
+    - target: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
+      propertyPath: m_SceneBindings.Array.data[4].value
+      value: 
+      objectReference: {fileID: 1710679991}
     - target: {fileID: 8763634369401279473, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
       propertyPath: m_Name
       value: RoomDirector
@@ -22388,6 +22400,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1191079237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+  m_PrefabInstance: {fileID: 1828402182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1291010823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22944,6 +22961,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1710679991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3847966147819307025, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+  m_PrefabInstance: {fileID: 1828402182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191079237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1774771293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23128,6 +23156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeTravelButton: {fileID: 797385773}
+  instruction: {fileID: 0}
 --- !u!1001 &1828402182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23165,6 +23194,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueSession.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: DialogueText.Array.data[0]
       value: It won't be long before this lab is destroyed
       objectReference: {fileID: 0}
@@ -23187,6 +23220,14 @@ PrefabInstance:
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.data[0]
       value: The timeleap watch may be useful...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueSession.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueSession.Array.data[1]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
@@ -23284,7 +23325,7 @@ PrefabInstance:
     - target: {fileID: 169459141161679348, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: RoomManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1191079237}
     - target: {fileID: 575263993776429394, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Layer
       value: 12
@@ -23341,13 +23382,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3965435501575454393, guid: ded4a82eed129b943957cd1d50233162, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4163387481523116476, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223112052953182799, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_IsActive

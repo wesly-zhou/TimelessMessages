@@ -101,9 +101,9 @@ public class PlayerMovement : MonoBehaviour
         faceRight = !faceRight;
         Debug.Log("FaceRight = " + faceRight);
         // NOTE: Multiply player's x local scale by -1.
-        Vector3 theScale = GameObject.FindGameObjectWithTag("PlayerArt").transform.localScale;
+        Vector3 theScale = GameObject.FindWithTag("PlayerArt").transform.localScale;
         theScale.x = theScale.x * -1;
-        GameObject.FindGameObjectWithTag("PlayerArt").transform.localScale = theScale;
+        GameObject.FindWithTag("PlayerArt").transform.localScale = theScale;
         Debug.Log("the Scale = " + theScale);
     }
 

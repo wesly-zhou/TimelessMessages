@@ -30,6 +30,8 @@ public class PlayerSideMovement : MonoBehaviour
     }
 
 	void FixedUpdate() {
+        if (!PlayerMovement.moveable)
+            return;
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		direction = Input.GetAxis("Horizontal");
 		if (direction != 0f)

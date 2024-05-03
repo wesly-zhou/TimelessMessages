@@ -48,7 +48,16 @@ public class GameManager : MonoBehaviour
         {"SecurityRoom", false},
         {"BioLab", false},
         {"PuzzleOne", false},
-        {"TestMap", false}
+        {"TestMap", false},
+        {"TestLaserLevel1", false},
+        {"TestLaserLevel2", false},
+        {"TestInvisibleRoad", false},
+        {"PuzzleTwo", false},
+        {"PuzzleThree", false},
+        {"PuzzleFour", false},
+        {"PuzzleFive", false},
+        {"TestFinalDoor", false},
+        {"TestFinalRoom", false}
 
     };
     void Start()
