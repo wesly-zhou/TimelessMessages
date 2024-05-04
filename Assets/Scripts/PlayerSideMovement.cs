@@ -44,10 +44,6 @@ public class PlayerSideMovement : MonoBehaviour
 			Turn();
 		}
 
-        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isTouchingGround) {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-        }
-
         if (player.velocity.y < 0)
             player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
