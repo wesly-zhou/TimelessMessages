@@ -139,6 +139,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.023
+      objectReference: {fileID: 0}
+    - target: {fileID: 523210095047494773, guid: b5a2844fa344022429292031f9eb0401, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.32
+      objectReference: {fileID: 0}
     - target: {fileID: 1536599088337296769, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_Name
       value: SecurityRoomDoor
@@ -519,6 +531,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1580865637}
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: maxPosition.x
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: maxPosition.y
+      value: 12.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: minPosition.x
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217977738103949939, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: minPosition.y
+      value: -9.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969345513888252860, guid: 3926809c0c6c25245aa411238406a150, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5166281834720447396, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -529,11 +569,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5789291027481416756, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.3
       objectReference: {fileID: 0}
     - target: {fileID: 5789291027481416756, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5789291027481416756, guid: 3926809c0c6c25245aa411238406a150, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39829,11 +39869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -23.4
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.12
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_LocalPosition.z
@@ -39879,6 +39919,11 @@ PrefabInstance:
 --- !u!1 &1580865636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6305904171940811870, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+  m_PrefabInstance: {fileID: 1580865635}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1580865637 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
   m_PrefabInstance: {fileID: 1580865635}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1592235880
