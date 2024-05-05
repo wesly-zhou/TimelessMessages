@@ -9,7 +9,19 @@ public class DoorHandler : MonoBehaviour
     public GameObject player;
     // Use an empty gameobject to define a new position for the player to spawn in the new level
     public GameObject newPoisiton;
+    public GameObject TextBubble;
+    private bool interactable = false;
 
+
+    void Update()
+    {
+        if (interactable && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene(newLevel);
+        }
+    }
+
+    
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         // On scene load, move the player to the new position
         Debug.Log("Moving player to new position" + newPoisiton.transform.position);
@@ -30,9 +42,17 @@ public class DoorHandler : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void OnTriggerEnter2D(Collider2D other){
+    private void OnTriggerEnter2D(Collider2D other){
         if (other.gameObject.tag == "Player"){
-            SceneManager.LoadScene (newLevel);
+            TextBubble.SetActive(true);
+            interactable = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other){
+        if (other.gameObject.tag == "Player"){
+            TextBubble.SetActive(false);
+            interactable = false;
         }
     }
 }
