@@ -23,7 +23,7 @@ public class TimeController : MonoBehaviour
     public float duration = 1f; 
     public static bool operatable = true;
     private static bool setupTime = true;
-    public GameObject Enemy;
+    public GameObject[] Enemy;
     public TextMeshProUGUI timerText;
     public static float remainingTime = 915;
     public Volume volume;
@@ -113,10 +113,13 @@ public class TimeController : MonoBehaviour
             PlayerMovement.moveable = false;
             Debug.Log("Issue 3");
             // Set Enemy state
-            if(Enemy != null){
+            if(Enemy.Length > 0){
                 // Enemy.GetComponent<AIPath>().canMove = false;
                 // Debug.Log("Enemy cannot move: " + Enemy.GetComponent<AIPath>().canMove);
-                Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                foreach (GameObject enemy in Enemy){
+                    enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+                }
+                
             }
             
             StartCoroutine(Waiting());
@@ -141,7 +144,14 @@ public class TimeController : MonoBehaviour
             //     if(Enemy != null){
             //     Enemy.GetComponent<AIPath>().canMove = true;
             // }
-                if(Enemy != null) Enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                if(Enemy.Length > 0){
+                // Enemy.GetComponent<AIPath>().canMove = false;
+                // Debug.Log("Enemy cannot move: " + Enemy.GetComponent<AIPath>().canMove);
+                    foreach (GameObject enemy in Enemy){
+                        enemy.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+                        enemy.GetComponentInChildren<Animator>().speed = 1;
+                    }
+                }
                 transitionTime = 0;
                 print("now you can move");
             }
@@ -169,9 +179,14 @@ public class TimeController : MonoBehaviour
             PlayerMovement.moveable = false;
             Debug.Log("Issue 4");
             print("player moveable: " + PlayerMovement.moveable);
-            if(Enemy != null){
-                Enemy.GetComponent<AIPath>().canMove = false;
-                Enemy.GetComponentInChildren<Animator>().speed = 0;
+            
+            if(Enemy.Length > 0){
+                // Enemy.GetComponent<AIPath>().canMove = false;
+                // Debug.Log("Enemy cannot move: " + Enemy.GetComponent<AIPath>().canMove);
+                foreach (GameObject enemy in Enemy){
+                    enemy.GetComponent<AIPath>().canMove = false;
+                    enemy.GetComponentInChildren<Animator>().speed = 0;
+                }
             }
             usedTimeLeap = true;
             startTransition1 = true;
