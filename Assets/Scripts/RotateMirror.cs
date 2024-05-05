@@ -15,7 +15,7 @@ public class RotateMirror : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interactable && Input.GetKeyDown(KeyCode.F))
+        if (interactable && Input.GetKeyDown(KeyCode.E))
         {
             transform.parent.Rotate(0, 0, 90);
         }
