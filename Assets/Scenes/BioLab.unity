@@ -16254,6 +16254,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6249257852891451561, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -44157,6 +44161,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 624226203}
+    - target: {fileID: 6801401244273856864, guid: a0ac74fead5b9bc4980c99f6f41daafc, type: 3}
+      propertyPath: maxSpeed
+      value: 5.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
