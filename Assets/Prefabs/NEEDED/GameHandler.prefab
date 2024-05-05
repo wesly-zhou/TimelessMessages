@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf27e7b101f853c4280fae88db0d228a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventoryManager: {fileID: 0}
 --- !u!114 &3053145408087295514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,9 +114,9 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 96c06fa402043f44ea0a8209df68a8f1, type: 2}
   Maincamera: {fileID: 0}
   duration: 1.5
-  Enemy: {fileID: 0}
+  Enemy: []
   timerText: {fileID: 0}
   volume: {fileID: 5329191160454404570}
   timerIcon: {fileID: 0}
   cooldownText: {fileID: 0}
-  timerCooldown: 10
+  instruction: {fileID: 0}

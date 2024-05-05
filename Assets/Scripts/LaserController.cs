@@ -90,6 +90,7 @@ public class LaserController : MonoBehaviour
             // Hit the player
             if(hit.transform.gameObject.name.Equals("Player") && deadly){
                     GameManager.DeathNum[SceneManager.GetActiveScene().name] += 1;
+                    PlayerController.justDied = true;
                     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     break;
                 }

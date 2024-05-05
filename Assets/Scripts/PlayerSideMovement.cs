@@ -63,8 +63,8 @@ public class PlayerSideMovement : MonoBehaviour
 		faceRight = !faceRight;
 
 		// Multiply player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
+		Vector3 theScale = GameObject.FindWithTag("PlayerArt").transform.localScale;
 		theScale.x *= -1;
-		transform.localScale = theScale;
+		GameObject.FindWithTag("PlayerArt").transform.localScale = theScale;
 	}
 }
