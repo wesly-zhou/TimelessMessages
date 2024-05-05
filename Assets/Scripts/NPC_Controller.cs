@@ -16,6 +16,7 @@ public class NPC_Controller : MonoBehaviour
     public String[] RequirementItems;
     private bool interactable = false;
     private InventoryManager InventoryManager;
+    public PlayableDirector director;
     void Start()
     {
         InventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
@@ -36,7 +37,13 @@ public class NPC_Controller : MonoBehaviour
                     return;
                 }
             }
-            GetComponent<PlayableDirector>().Play(FinalAnimation);
+            if (director != null) {
+                TextBubble.SetActive(false);
+                interactable = false;
+                director.playableAsset = FinalAnimation;
+                director.Play();
+            }
+            
         }
     }
 

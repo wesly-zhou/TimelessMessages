@@ -97,6 +97,7 @@ public class RoomManager : MonoBehaviour
             if (!showNext)
             {
                 // textBubble.GetComponentInChildren<Text>().text = "";
+                Debug.Log("Show the whole sentence");
                 StopAllCoroutines();
                 textBubble.GetComponentInChildren<Text>().text = DialogueText[diaNum + pastDiaNum];
                 showNext = true;
@@ -105,18 +106,21 @@ public class RoomManager : MonoBehaviour
             }
             else if(diaNum < dialogueLength - 1)
             {
+                
                 diaNum++;
+                Debug.Log("Next dialogue, index: " + diaNum);
                 StartCoroutine(TypeDialogue(DialogueText[diaNum + pastDiaNum]));
             }
-            else if(sessionIndex < DialogueSession.Length - 1)
+            else if(sessionIndex < DialogueSession.Length)
             {
                 if (director != null) director.Play();
                 Debug.Log("Current session end, play the animation and wait for the next session");
+                inDialogue = false;
                 textBubble.SetActive(false);
                 diaNum = 0;  // Reset the dialogue index
                 sessionIndex++;
                 pastDiaNum += dialogueLength;
-                dialogueLength = DialogueSession[sessionIndex];
+                if(sessionIndex < DialogueSession.Length) dialogueLength = DialogueSession[sessionIndex];
             }
             else
             {
@@ -175,7 +179,7 @@ public class RoomManager : MonoBehaviour
         if (dialogueLength > 0){
             textBubble.SetActive(true);
             // The first dialogue will be shown automatically
-            yield return StartCoroutine(TypeDialogue(DialogueText[diaNum + pastDiaNum]));
+            if (diaNum + pastDiaNum < DialogueText.Length) yield return StartCoroutine(TypeDialogue(DialogueText[diaNum + pastDiaNum]));
             // yield return Input.GetKeyDown(KeyCode.E);
             // while(!Input.GetKeyDown(KeyCode.E))
             // {
@@ -249,6 +253,22 @@ public class RoomManager : MonoBehaviour
     public void EnablePlayerMovement()
     {
         PlayerMovement.moveable = true;
-        if(UIButton != null) UIButton.SetActive(false);
+        if(UIButton != null) UIButton.SetActive(true);
+        inDialogue = false;
+        textBubble.SetActive(false);
+    }
+
+    public void FinalAnimation(){
+        if (director != null) director.Pause();
+                         // Player become static
+                    GameObject.FindWithTag("Player").GetComponentInChildren<Animator>().SetInteger("direction", 3);
+                    if(UIButton != null) UIButton.SetActive(false);
+                    PlayerMovement.moveable = false;
+                    Debug.Log("Issue 2");
+                    StartCoroutine(StartDialogue());
+    }
+
+    public void showEndCanvas(){
+        GameObject.Find("ENDCanvas").transform.Find("PauseMenu").gameObject.SetActive(true);
     }
 }
