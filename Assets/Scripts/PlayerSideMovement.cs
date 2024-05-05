@@ -23,6 +23,10 @@ public class PlayerSideMovement : MonoBehaviour
     }
 
     void Update() {
+        if (!PlayerMovement.moveable){
+            player.velocity = new Vector2(0, 0);
+            return;
+        }
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
         if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isTouchingGround)
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
@@ -30,8 +34,10 @@ public class PlayerSideMovement : MonoBehaviour
     }
 
 	void FixedUpdate() {
-        if (!PlayerMovement.moveable)
+        if (!PlayerMovement.moveable){
+            player.velocity = new Vector2(0, 0);
             return;
+        }
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 		direction = Input.GetAxis("Horizontal");
 		if (direction != 0f)
