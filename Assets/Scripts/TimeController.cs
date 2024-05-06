@@ -82,9 +82,9 @@ public class TimeController : MonoBehaviour
     }
 
     void Update() {
-        if (isPresent && remainingTime > 0)
+        if (remainingTime > 0)
             remainingTime -= Time.deltaTime;
-        else if (isPresent && remainingTime < 0)
+        else if (remainingTime < 0)
             remainingTime = 0;
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
