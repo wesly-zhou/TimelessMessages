@@ -29,7 +29,9 @@ public class Item : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") 
         {
-            inventoryManager.AddItem(itemName, itemDesc, sprite);
+            if (itemName != "TimeWatch") {
+                inventoryManager.AddItem(itemName, itemDesc, sprite);
+            }
             Destroy(gameObject);
         }
     }
