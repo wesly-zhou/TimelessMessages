@@ -21,6 +21,10 @@ public class CollectableItem : MonoBehaviour
     private void Start()
     {   
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
+        if(inventoryManager.CheckItem(itemName))
+        {
+            gameObject.SetActive(false);
+        }
         item.SetActive(true);
         borderItem.SetActive(false);
         collectBubble.SetActive(false);
