@@ -21,9 +21,10 @@ public class DoorHandler : MonoBehaviour
         }
     }
 
-    
+
     void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         // On scene load, move the player to the new position
+        Debug.Log("Current Scene: " + scene.name);
         Debug.Log("Moving player to new position" + newPoisiton.transform.position);
         Debug.Log("Last Room: " + GameManager.LastRoom + " New Level: " + newLevel);
         if(newPoisiton != null && GameManager.LastRoom == newLevel) {  // The new scene of the door actually is the last scene of the player
