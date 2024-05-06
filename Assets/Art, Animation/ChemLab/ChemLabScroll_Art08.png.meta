@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,9 +127,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 272
-        y: 336
-        width: 32
-        height: 32
+        y: 352
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,6 +139,69 @@ TextureImporter:
       bones: []
       spriteID: 6434d39d7a1544bcbb95112cc60ca082
       internalID: 345737018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChemLabScroll_Art08_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 352
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da861c191e7840f2a74573b5fffa054
+      internalID: -1491229282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChemLabScroll_Art08_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3da2d81badd7941e9a6b5e93d6e6c4f8
+      internalID: -1507271475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChemLabScroll_Art08_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f2cf64dbd9749879d051187bc4c2b5
+      internalID: -901990284
       vertices: []
       indices: 
       edges: []
@@ -155,6 +218,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ChemLabScroll_Art08_0: 345737018
+      ChemLabScroll_Art08_1: -1491229282
+      ChemLabScroll_Art08_2: -1507271475
+      ChemLabScroll_Art08_3: -901990284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
