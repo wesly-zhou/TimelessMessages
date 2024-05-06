@@ -37,6 +37,9 @@ public class TimeController : MonoBehaviour
     //add
     public GameObject instruction;
 
+    // AudioManager
+    // public AudioManager audioManager;
+
     void Start()
     {
         timerIcon.fillAmount = 0;
@@ -171,6 +174,7 @@ public class TimeController : MonoBehaviour
         {   
             print("Start1: " + startTransition1);
             print("Start2: " + startTransition2);
+            AudioManager.instance.TransitionMusic();
             onCooldown = true;
             currentCooldown = timerCooldown;
             setupTime = false;
