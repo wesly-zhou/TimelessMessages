@@ -174,7 +174,7 @@ public class TimeController : MonoBehaviour
         {   
             print("Start1: " + startTransition1);
             print("Start2: " + startTransition2);
-            AudioManager.instance.TransitionMusic();
+            /// AudioManager.instance.TransitionMusic();
             onCooldown = true;
             currentCooldown = timerCooldown;
             setupTime = false;
