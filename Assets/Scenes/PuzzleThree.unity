@@ -515,14 +515,14 @@ PrefabInstance:
     - target: {fileID: 2153926795352590311, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: sprite
       value: 
-      objectReference: {fileID: 959852017, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
+      objectReference: {fileID: 267518895, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
     - target: {fileID: 2153926795352590311, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: itemName
-      value: KeyFour
+      value: GreenKey
       objectReference: {fileID: 0}
     - target: {fileID: 4493069582111665609, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_Name
-      value: KeyFour
+      value: GreenKey
       objectReference: {fileID: 0}
     - target: {fileID: 6037099361807314954, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_RootOrder
@@ -583,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 6853819690279745113, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 959852017, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
+      objectReference: {fileID: 267518895, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
     - target: {fileID: 8077019583699014147, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.6742225
