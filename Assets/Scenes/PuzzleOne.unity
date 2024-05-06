@@ -22034,6 +22034,18 @@ PrefabInstance:
       propertyPath: textBubble
       value: 
       objectReference: {fileID: 2124612698}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: TutorialText.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: TutorialText.Array.data[0]
+      value: 'Here should '
+      objectReference: {fileID: 0}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
       value: RoomManager
