@@ -28,7 +28,7 @@ public class PlayerSideMovement : MonoBehaviour
             return;
         }
         isTouchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space)) && isTouchingGround)
+        if(Input.GetKeyDown(KeyCode.W) && isTouchingGround)
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
         playerAnimation.SetBool("OnGround", isTouchingGround);
     }
@@ -52,7 +52,7 @@ public class PlayerSideMovement : MonoBehaviour
 
         if (player.velocity.y < 0)
             player.velocity += Vector2.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        else if (player.velocity.y > 0 && !Input.GetButton ("Jump"))
+        else if (player.velocity.y > 0 && !Input.GetKeyDown(KeyCode.W))
             player.velocity += Vector2.up * Physics.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         playerAnimation.SetFloat("Speed", Mathf.Abs(player.velocity.x));
 	}
