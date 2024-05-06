@@ -11836,6 +11836,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1069907068}
     m_Modifications:
+    - target: {fileID: 30595743430135989, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 30595743430135989, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1078598964128472843, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -11891,6 +11899,10 @@ PrefabInstance:
     - target: {fileID: 1422014301789896249, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: m_Color.r
       value: 0.21542363
+      objectReference: {fileID: 0}
+    - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
+      propertyPath: itemDesc
+      value: Allows the user to travel between the present and the past
       objectReference: {fileID: 0}
     - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: RoomManager
