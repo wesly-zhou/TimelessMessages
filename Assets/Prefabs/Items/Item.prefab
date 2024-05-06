@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 1599738043956665755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.3031981}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1078598964128472843}
@@ -332,7 +332,7 @@ Transform:
   - {fileID: 4745503174633440140}
   - {fileID: 3299574196804764843}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7719316512276227358
 BoxCollider2D:
