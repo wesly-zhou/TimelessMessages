@@ -24297,9 +24297,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1836353509}
     m_Modifications:
+    - target: {fileID: 2153926795352590311, guid: 214625461512837439739c4e4a354a85, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 959852017, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
+    - target: {fileID: 2153926795352590311, guid: 214625461512837439739c4e4a354a85, type: 3}
+      propertyPath: itemName
+      value: Graykey
+      objectReference: {fileID: 0}
     - target: {fileID: 4493069582111665609, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_Name
-      value: KeyFive
+      value: GrayKey
       objectReference: {fileID: 0}
     - target: {fileID: 6037099361807314954, guid: 214625461512837439739c4e4a354a85, type: 3}
       propertyPath: m_RootOrder
@@ -24345,6 +24353,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6853819690279745113, guid: 214625461512837439739c4e4a354a85, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 959852017, guid: 1b040c438e771574983ec5ddbab197e5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24360,7 +24372,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3900147085836454810, guid: 0fe40618ef771b74c91ca02c16054edb, type: 3}
       propertyPath: m_Name
-      value: MessageFive
+      value: MessageFour
       objectReference: {fileID: 0}
     - target: {fileID: 7465033154379644918, guid: 0fe40618ef771b74c91ca02c16054edb, type: 3}
       propertyPath: m_RootOrder
@@ -24405,6 +24417,11 @@ PrefabInstance:
     - target: {fileID: 7465033154379644918, guid: 0fe40618ef771b74c91ca02c16054edb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8576206992820323204, guid: 0fe40618ef771b74c91ca02c16054edb, type: 3}
+      propertyPath: itemDesc
+      value: Remember the experiments we conducted recently? They might be connected
+        to the outbreak.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
