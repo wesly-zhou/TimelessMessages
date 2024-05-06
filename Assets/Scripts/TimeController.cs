@@ -114,7 +114,7 @@ public class TimeController : MonoBehaviour
         // When timeleap to a new scene 
         if (startTransition2 && usedTimeLeap){
             PlayerMovement.moveable = false;
-            Debug.Log("Issue 3");
+            // Debug.Log("Issue 3");
             // Set Enemy state
             if(Enemy.Length > 0){
                 // Enemy.GetComponent<AIPath>().canMove = false;
