@@ -22257,7 +22257,7 @@ PrefabInstance:
       objectReference: {fileID: 2124612698}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: DialogueText.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.size
@@ -22272,8 +22272,16 @@ PrefabInstance:
       value: I also need collectable items in the main rooms
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.data[2]
+      value: In total, I will need 5 of each thing
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.data[0]
-      value: 'Here should '
+      value: Perhaps I should time travel here...
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: TutorialText.Array.data[1]
+      value: I should try time traveling again
       objectReference: {fileID: 0}
     - target: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: m_Name
