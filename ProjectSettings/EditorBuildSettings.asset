@@ -29,7 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MeetingRoom.unity
     guid: bd2e3af7603cfaa4fa0e84edf426a4e2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CorridorTwo.unity
     guid: ae897b2eed13d804c875fa31c032cd02
   - enabled: 1
@@ -68,6 +68,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PuzzleTen.unity
     guid: 9537001733895ed4e84c759fd65e432e
+  - enabled: 1
+    path: Assets/Scenes/TestScene/TestFinalRoom.unity
+    guid: 4822382646577dd4ab955edf5ecc523e
   - enabled: 1
     path: Assets/Scenes/ToxicChemLab.unity
     guid: 7d24046852bbd40c48ae7aa7caac168b
