@@ -79,6 +79,7 @@ public class RoomManager : MonoBehaviour
                 if(UIButton != null) UIButton.SetActive(false);
                 director.Play();
                 GameManager.SceneAnim[SceneManager.GetActiveScene().name] = true;
+                director.stopped += DisableTimeline;
                 Debug.Log("SceneAnim: " + GameManager.SceneAnim[SceneManager.GetActiveScene().name]);
             }
         }
@@ -86,7 +87,8 @@ public class RoomManager : MonoBehaviour
         
     }
 
-    
+
+
     // Update is called once per frame
     void Update()
     {
@@ -270,5 +272,9 @@ public class RoomManager : MonoBehaviour
 
     public void showEndCanvas(){
         GameObject.Find("ENDCanvas").transform.Find("PauseMenu").gameObject.SetActive(true);
+    }
+
+    private void DisableTimeline(PlayableDirector director){
+        director.playableAsset = null;
     }
 }
