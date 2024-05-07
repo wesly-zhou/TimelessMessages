@@ -5541,6 +5541,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 964ef28421cf5814fa452c8e5f64a474, type: 3}
+--- !u!1 &58717574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1650847115970756941, guid: 036884769ffe34f909baa1476d629aca, type: 3}
+  m_PrefabInstance: {fileID: 973552575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &88151431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 823253467335667069, guid: 75dd0293482b8884ebdf125e803fd40e, type: 3}
@@ -6660,6 +6665,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5724918659363924664, guid: 8e55c9eb997a4454ca75d51490612d27, type: 3}
+      propertyPath: TextBubble
+      value: 
+      objectReference: {fileID: 58717574}
     - target: {fileID: 6750627308366502988, guid: 8e55c9eb997a4454ca75d51490612d27, type: 3}
       propertyPath: m_Color.a
       value: 1
