@@ -83,14 +83,16 @@ public class AudioManager : MonoBehaviour
         PlayMusic(activeSource);
         activeSource.volume = 0;
         activeSource.Play();
+        activeSource.loop = true;
         FiresfxSource.volume = 0;
         FiresfxSource.Play();
+        FiresfxSource.loop = true;
         while (activeSource.volume < 1 && FiresfxSource.volume < 0.3)
         {
             // Debug.Log("Change sound and now the ispresent is " + TimeController.isPresent);
             // Play the fire sound effect on present
             if (!isPresent) FiresfxSource.volume += Time.deltaTime * 0.5f;
-            activeSource.volume += Time.deltaTime;
+            activeSource.volume += Time.deltaTime * 0.5f;
             yield return null;
         }
         

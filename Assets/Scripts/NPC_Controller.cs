@@ -26,10 +26,13 @@ public class NPC_Controller : MonoBehaviour
     void Update()
     {
         if (interactable && Input.GetKeyDown(KeyCode.E)) {
+            if (TextBubble.activeSelf) {
+                TextBubble.SetActive(false);
+            }
             foreach(String item in RequirementItems) {
                 if (!InventoryManager.CheckItem(item)) {
                     StopAllCoroutines();
-                    DialogueBubble.GetComponentInChildren<Text>().text = "Hurry up and find the " + item + "!";
+                    DialogueBubble.GetComponentInChildren<Text>().text = "Hurry up and find the <color=#E52020>" + item + "</color>!";
                     DialogueBubble.GetComponentInChildren<Image>().enabled = false;
                     TextBubble.SetActive(false);
                     DialogueBubble.SetActive(true);
