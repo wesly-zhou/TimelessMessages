@@ -40,5 +40,9 @@ public class Item : MonoBehaviour
         {
             RoomManager.GetComponent<RoomManager>().TriggerDialogue();
         }
+        if (itemName == "YellowKey" && RoomManager != null)
+        {
+            RoomManager.GetComponent<RoomManager>().TriggerDialogue();
+        }
     }
 }

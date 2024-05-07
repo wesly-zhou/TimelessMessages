@@ -16608,6 +16608,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315353c485481a8499054ffe2da94997, type: 3}
+--- !u!1 &838752072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2644545472251009133, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+  m_PrefabInstance: {fileID: 1953282849}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &842393458
 GameObject:
   m_ObjectHideFlags: 0
@@ -17025,6 +17030,10 @@ PrefabInstance:
       propertyPath: itemName
       value: YellowKey
       objectReference: {fileID: 0}
+    - target: {fileID: 5069868521649162187, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
+      propertyPath: RoomManager
+      value: 
+      objectReference: {fileID: 838752072}
     - target: {fileID: 6192455336499303190, guid: 9c1ac358ad7b21d48a8e3eec585fbc9a, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -21795,6 +21804,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1205881798004913248, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1205881798004913248, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2379863939032915116, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -21826,6 +21843,26 @@ PrefabInstance:
     - target: {fileID: 3172434601664977627, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 32768
+      objectReference: {fileID: 0}
+    - target: {fileID: 3289238579017433261, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678969225232991378, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678969225232991378, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678969225232991378, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678969225232991378, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.13
       objectReference: {fileID: 0}
     - target: {fileID: 3950099273090156912, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_RootOrder
@@ -21907,6 +21944,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5561173276727343221, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6249257852891451561, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -21923,6 +21964,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: df0862cba926fd54da2d6d9d2924a57f, type: 3}
+    - target: {fileID: 7797160969117628433, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797160969117628433, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797160969117628433, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797160969117628433, guid: ded4a82eed129b943957cd1d50233162, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -181
+      objectReference: {fileID: 0}
     - target: {fileID: 8199510826750587186, guid: ded4a82eed129b943957cd1d50233162, type: 3}
       propertyPath: runSpeed
       value: 3
@@ -22065,7 +22122,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -22149,7 +22206,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3847966147819307025, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
   m_PrefabInstance: {fileID: 1953282849}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 838752072}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
@@ -22185,11 +22242,19 @@ PrefabInstance:
       objectReference: {fileID: 2124612698}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: DialogueText.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.data[0]
+      value: Each puzzle room has a key and a message
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
+      propertyPath: DialogueText.Array.data[1]
+      value: I also need collectable items in the main rooms
       objectReference: {fileID: 0}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: TutorialText.Array.data[0]
