@@ -40,6 +40,7 @@ public class CollectableItem : MonoBehaviour
             collectable = true;
         }
     }
+    
     void Update() {
         if (collectable && Input.GetKeyDown(KeyCode.E)) {
             inventoryManager.AddItem(itemName, itemDesc, sprite);
