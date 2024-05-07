@@ -11,6 +11,9 @@ public class CameraMoveBounded : MonoBehaviour {
        public Vector2 maxPosition; // X and Y values for upper right corner
        public AnimationCurve curve;
 
+       public float baseAspectRatio = 16f / 9f;  
+       private float baseOrthographicSize = 6f;
+
        void Awake(){
               // DontDestroyOnLoad(gameObject);
               GameObject[] objs = GameObject.FindGameObjectsWithTag("MainCamera");
@@ -23,7 +26,7 @@ public class CameraMoveBounded : MonoBehaviour {
        
        void Start () {
              
-             
+             AdjustCameraSize();
               
        }
        void Update () {
@@ -37,4 +40,18 @@ public class CameraMoveBounded : MonoBehaviour {
                      transform.position = Vector3.Lerp(transform.position, targPos, curve.Evaluate(smoothing));
               }
        }
+
+       void AdjustCameraSize()
+    {
+        Camera camera = GetComponent<Camera>();
+        float currentAspectRatio = (float)Screen.width / Screen.height;
+        Debug.Log(currentAspectRatio);
+       
+        float aspectRatioScale = currentAspectRatio / baseAspectRatio;
+        Debug.Log(aspectRatioScale);
+
+        camera.orthographicSize = baseOrthographicSize / aspectRatioScale;
+        Debug.Log(baseOrthographicSize);
+        Debug.Log(camera.orthographicSize);
+    }
 }
