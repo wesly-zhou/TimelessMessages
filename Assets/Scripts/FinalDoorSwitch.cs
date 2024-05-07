@@ -43,6 +43,7 @@ public class FinalDoorSwitch : MonoBehaviour
         if (canActivate && Input.GetKeyDown(KeyCode.E)) {
             switchUsed = true;
             finalDoor.SetActive(true);
+            finalDoor.GetComponent<Animator>().Play("ShowFinalDoor");
         }
     }
 }
