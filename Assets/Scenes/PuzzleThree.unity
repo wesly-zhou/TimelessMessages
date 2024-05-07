@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6592787648686597448, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8583184712925994368, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20301,6 +20301,10 @@ PrefabInstance:
     - target: {fileID: 1536599088337296769, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_Name
       value: BioLabDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1536599088337296769, guid: b5a2844fa344022429292031f9eb0401, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2675598785353907754, guid: b5a2844fa344022429292031f9eb0401, type: 3}
       propertyPath: m_IsActive
@@ -55910,6 +55914,10 @@ PrefabInstance:
     - target: {fileID: 1650847115970756941, guid: 036884769ffe34f909baa1476d629aca, type: 3}
       propertyPath: m_Name
       value: Text Bubble - Use
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650847115970756941, guid: 036884769ffe34f909baa1476d629aca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4793486159830512062, guid: 036884769ffe34f909baa1476d629aca, type: 3}
       propertyPath: m_LocalPosition.x
