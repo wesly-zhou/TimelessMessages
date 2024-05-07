@@ -112,7 +112,7 @@ public class MonsterController : MonoBehaviour
     void SetPatrolDestination()
     {
         patrolDestination = initialPosition + moveDirection * patrolDistance;
-        Debug.Log("Set Destination" + patrolDestination);
+        // Debug.Log("Set Destination" + patrolDestination);
     }
 
     void ChangeDirection()
