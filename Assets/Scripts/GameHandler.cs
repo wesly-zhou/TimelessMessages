@@ -8,25 +8,22 @@ public class GameHandler : MonoBehaviour
 {
     [SerializeField]
     private InventoryManager inventoryManager;
-    public static bool introLoaded = false;
+    private static bool introLoaded = false;
 
     private void Start() {
         inventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
     }
 
     public void StartGame() {
-        if (!introLoaded)
+        if (!introLoaded) {
             SceneManager.LoadScene("IntroScene");
+            introLoaded = true;
+        }
         else
             SceneManager.LoadScene("ChemLab");
     }
 
     public void Main() {
-        SceneManager.LoadScene("MainMenu");
-        introLoaded = true;
-    }
-
-    public void CreditsMain() {
         SceneManager.LoadScene("MainMenu");
     }
 
