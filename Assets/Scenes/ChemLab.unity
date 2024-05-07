@@ -22059,7 +22059,7 @@ PrefabInstance:
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: director
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1917360711}
     - target: {fileID: 1428191588393118566, guid: 9735ba0610facc841979436d93cf13cf, type: 3}
       propertyPath: textBubble
       value: 
@@ -22534,6 +22534,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3105960093488984001, guid: b5a2844fa344022429292031f9eb0401, type: 3}
   m_PrefabInstance: {fileID: 1913019159}
+  m_PrefabAsset: {fileID: 0}
+--- !u!320 &1917360711 stripped
+PlayableDirector:
+  m_CorrespondingSourceObject: {fileID: 4293035718871652435, guid: caee5ca44af1d7249824ab8aefbddf26, type: 3}
+  m_PrefabInstance: {fileID: 131591235}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1940914542
 GameObject:
