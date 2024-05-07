@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
         {"TestLab", 0},
         {"TestChemLab", 0},
         {"ChemLab", 0},
+        {"Corridor", 0},
         {"SecurityRoom", 0},
         {"BioLab", 0},
         {"PuzzleOne", 0},
