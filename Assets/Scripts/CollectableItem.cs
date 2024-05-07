@@ -14,7 +14,7 @@ public class CollectableItem : MonoBehaviour
     public GameObject item;
     public GameObject borderItem;
     public GameObject collectBubble;
-    bool collectable = true;
+    bool collectable = false;
 
     private InventoryManager inventoryManager;
     // Start is called before the first frame update
