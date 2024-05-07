@@ -22,7 +22,37 @@ public class KeyPanelHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (yellowKey)
+        {
+            // Disable the button component and show the inserted image
+            YellowKeyHole.enabled = false;
+            YellowKeyHole.GetComponentInChildren<RawImage>().enabled = true;
+        }
+        if (redKey)
+        {
+            // Disable the button component and show the inserted image
+            RedKeyHole.enabled = false;
+            RedKeyHole.GetComponentInChildren<RawImage>().enabled = true;
+        }
+        if (blueKey)
+        {
+            // Disable the button component and show the inserted image
+            BlueKeyHole.enabled = false;
+            BlueKeyHole.GetComponentInChildren<RawImage>().enabled = true;
+        }
+        if (greenKey)
+        {
+            // Disable the button component and show the inserted image
+            GreenKeyHole.enabled = false;
+            GreenKeyHole.GetComponentInChildren<RawImage>().enabled = true;
+        }
+        if (grayKey)
+        {
+            // Disable the button component and show the inserted image
+            GrayKeyHole.enabled = false;
+            GrayKeyHole.GetComponentInChildren<RawImage>().enabled = true;
+        }
+
     }
 
     // Update is called once per frame
@@ -51,7 +81,8 @@ public class KeyPanelHandler : MonoBehaviour
         {
             // Temp operation
             YellowKeyHole.enabled = false;
-            YellowKeyHole.gameObject.SetActive(false);
+            // YellowKeyHole.gameObject.SetActive(false);
+            YellowKeyHole.GetComponentInChildren<RawImage>().enabled = true;
             yellowKey = true;
         }
         else
@@ -69,7 +100,8 @@ public class KeyPanelHandler : MonoBehaviour
         {
             // Temp operation
             RedKeyHole.enabled = false;
-            RedKeyHole.gameObject.SetActive(false);
+            // RedKeyHole.gameObject.SetActive(false);
+            RedKeyHole.GetComponentInChildren<RawImage>().enabled = true;
             redKey = true;
         }
         else
@@ -87,7 +119,8 @@ public class KeyPanelHandler : MonoBehaviour
         {
             // Temp operation
             BlueKeyHole.enabled = false;
-            BlueKeyHole.gameObject.SetActive(false);
+            // BlueKeyHole.gameObject.SetActive(false);
+            BlueKeyHole.GetComponentInChildren<RawImage>().enabled = true;
             blueKey = true;
         }
         else
@@ -105,7 +138,8 @@ public class KeyPanelHandler : MonoBehaviour
         {
             // Temp operation
             GreenKeyHole.enabled = false;
-            GreenKeyHole.gameObject.SetActive(false);
+            // GreenKeyHole.gameObject.SetActive(false);
+            GreenKeyHole.GetComponentInChildren<RawImage>().enabled = true;
             greenKey = true;
         }
         else
@@ -123,7 +157,8 @@ public class KeyPanelHandler : MonoBehaviour
         {
             // Temp operation
             GrayKeyHole.enabled = false;
-            GrayKeyHole.gameObject.SetActive(false);
+            // GrayKeyHole.gameObject.SetActive(false);
+            GrayKeyHole.GetComponentInChildren<RawImage>().enabled = true;
             grayKey = true;
         }
         else
