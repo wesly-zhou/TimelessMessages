@@ -36,6 +36,7 @@ public class TimeController : MonoBehaviour
 
     //add
     public GameObject instruction;
+    public GameObject MaskPanel;
 
     // AudioManager
     // public AudioManager audioManager;
@@ -201,9 +202,10 @@ public class TimeController : MonoBehaviour
             TimeLeapVFX.GetComponent<SpriteRenderer>().enabled = true;
             StartCoroutine(TimeTravel());
             // transitionTime = 0;
-            if (instruction != null) {
+            if (instruction != null && MaskPanel != null) {
                 ShowTimeTravelButton.instruction_click = true;
                 instruction.SetActive(false);
+                MaskPanel.SetActive(false);
             } else {
                 Debug.LogWarning("Instruction object not assigned in this scene.");
             }

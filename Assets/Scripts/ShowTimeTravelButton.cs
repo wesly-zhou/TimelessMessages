@@ -12,6 +12,7 @@ public class ShowTimeTravelButton : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject instruction;
+    public GameObject MaskPanel;
     public static bool instruction_click = false;
     void Start()
     {
@@ -25,7 +26,8 @@ public class ShowTimeTravelButton : MonoBehaviour
         }
         if(instruction_click) 
                 {
-                    instruction.SetActive(false);
+                    if (instruction != null )instruction.SetActive(false);
+                    MaskPanel.SetActive(false);
                 }
     }
 
@@ -35,6 +37,7 @@ public class ShowTimeTravelButton : MonoBehaviour
         if(inventoryManager.CheckItem("TimeWatch") && !hasTimeWatch)
         {
                 timeTravelButton.SetActive(true);
+                PlayerMovement.moveable = false;
                 timeTravelButton.GetComponent<Animator>().SetTrigger("Sparking");
                 hasTimeWatch = true;
 
