@@ -68,7 +68,7 @@ public class AudioManager : MonoBehaviour
         while (activeSource.volume > 0 && FiresfxSource.volume > 0)
         {
             FiresfxSource.volume -= Time.deltaTime * 0.5f;
-            activeSource.volume -= Time.deltaTime;
+            activeSource.volume -= Time.deltaTime * 0.5f;
             yield return null;
         }
 
