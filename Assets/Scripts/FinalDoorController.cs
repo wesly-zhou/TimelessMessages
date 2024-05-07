@@ -48,6 +48,7 @@ public class FinalDoorController : MonoBehaviour
         if (other.gameObject.tag == "Player") {
             TextBubble.SetActive(false);
             secondTextBubble.SetActive(false);
+            interactable = false;
         }
     }
 }
