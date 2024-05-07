@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour
     private AudioSource activeSource;
 
     private bool transitioning = false;
-    private bool isPlaying = false;
+    // private bool isPlaying = false;
     void Awake()
     {
         // isPlaying = activeSource.isPlaying;
