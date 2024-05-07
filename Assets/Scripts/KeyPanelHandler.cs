@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class KeyPanelHandler : MonoBehaviour
 {
-    public InventoryManager InventoryManager;
+    private InventoryManager InventoryManager;
     public TMPro.TextMeshProUGUI NoticeText;
     public Button YellowKeyHole;
     public Button RedKeyHole;
@@ -22,6 +22,7 @@ public class KeyPanelHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InventoryManager = GameObject.Find("InventoryCanvas").GetComponent<InventoryManager>();
         if (yellowKey)
         {
             // Disable the button component and show the inserted image
