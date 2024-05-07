@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -91,6 +92,7 @@ public class TimeController : MonoBehaviour
             remainingTime -= Time.deltaTime;
         else if (remainingTime < 0)
             remainingTime = 0;
+            SceneManager.LoadScene("LoseScene");
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
