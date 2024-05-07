@@ -28,7 +28,7 @@ public class DoorHandler : MonoBehaviour
         Debug.Log("Moving player to new position" + newPoisiton.transform.position);
         Debug.Log("Last Room: " + GameManager.LastRoom + " New Level: " + newLevel);
         if(newPoisiton != null && GameManager.LastRoom == newLevel) {  // The new scene of the door actually is the last scene of the player
-            
+            gameObject.GetComponent<AudioSource>().Play();
             player.transform.position = newPoisiton.transform.position;
             GameManager.LastRoom = SceneManager.GetActiveScene().name;
         }

@@ -27,7 +27,7 @@ public class ShowTimeTravelButton : MonoBehaviour
         if(instruction_click) 
                 {
                     if (instruction != null )instruction.SetActive(false);
-                    MaskPanel.SetActive(false);
+                    if (MaskPanel != null) MaskPanel.SetActive(false);
                 }
     }
 

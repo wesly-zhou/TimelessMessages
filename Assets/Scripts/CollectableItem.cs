@@ -17,6 +17,8 @@ public class CollectableItem : MonoBehaviour
     bool collectable = false;
 
     private InventoryManager inventoryManager;
+
+    // public AudioClip collectSound;
     // Start is called before the first frame update
     private void Start()
     {   
@@ -55,4 +57,6 @@ public class CollectableItem : MonoBehaviour
         collectBubble.SetActive(false);
         collectable = false;
     }
+
+    
 }

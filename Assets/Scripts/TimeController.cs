@@ -41,6 +41,10 @@ public class TimeController : MonoBehaviour
     // AudioManager
     // public AudioManager audioManager;
 
+    // SFX
+    public AudioClip TimeTravelSFX;
+    public AudioClip TravelBackSFX;
+    // public AudioClip FireBurningSFX;
     void Start()
     {
         timerIcon.fillAmount = 0;
@@ -170,12 +174,13 @@ public class TimeController : MonoBehaviour
 
     public void OnbuttonClick() {
         
-
+        bool curState = isPresent;
         if (setupTime && !onCooldown)
         {   
+            StartCoroutine(PlayTimeTravelSFX());
             print("Start1: " + startTransition1);
             print("Start2: " + startTransition2);
-            AudioManager.instance.TransitionMusic();
+            AudioManager.instance.TransitionMusic(curState);
             onCooldown = true;
             currentCooldown = timerCooldown;
             setupTime = false;
@@ -234,5 +239,15 @@ public class TimeController : MonoBehaviour
 
     public void reduceCooldown() {
         currentCooldown -= 5;
+    }
+
+    IEnumerator PlayTimeTravelSFX() {
+        AudioSource audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.loop = false;
+        audioSource.clip = TimeTravelSFX;
+        audioSource.Play();
+        yield return new WaitForSeconds(1.5f);
+        audioSource.clip = TravelBackSFX;
+        audioSource.Play();
     }
 }

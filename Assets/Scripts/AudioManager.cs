@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource1;
     public AudioSource musicSource2;
+    public AudioSource FiresfxSource;
     private AudioSource activeSource;
 
     private bool transitioning = false;
@@ -30,6 +31,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (TimeController.isPresent) PlayMusic(FiresfxSource);
+        FiresfxSource.loop = true;
         activeSource = musicSource1;
         PlayMusic(activeSource);
         activeSource.loop = true;
@@ -49,27 +52,29 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void TransitionMusic()
+    public void TransitionMusic(bool isPresent)
     {
         if (!transitioning)
         {
-            StartCoroutine(TransitionCoroutine());
+            StartCoroutine(TransitionCoroutine(isPresent));
         }
     }
 
-    IEnumerator TransitionCoroutine()
+    IEnumerator TransitionCoroutine(bool isPresent)
     {
         transitioning = true;
 
         // Gradually reduce the volume of the current music
-        while (activeSource.volume > 0)
+        while (activeSource.volume > 0 && FiresfxSource.volume > 0)
         {
+            FiresfxSource.volume -= Time.deltaTime * 0.5f;
             activeSource.volume -= Time.deltaTime;
             yield return null;
         }
 
         // Stop current music
         activeSource.Stop();
+        FiresfxSource.Stop();
 
         // Swap the active source
         activeSource = (activeSource == musicSource1) ? musicSource2 : musicSource1;
@@ -78,12 +83,18 @@ public class AudioManager : MonoBehaviour
         PlayMusic(activeSource);
         activeSource.volume = 0;
         activeSource.Play();
-
-        while (activeSource.volume < 1)
+        FiresfxSource.volume = 0;
+        FiresfxSource.Play();
+        while (activeSource.volume < 1 && FiresfxSource.volume < 0.3)
         {
+            // Debug.Log("Change sound and now the ispresent is " + TimeController.isPresent);
+            // Play the fire sound effect on present
+            if (!isPresent) FiresfxSource.volume += Time.deltaTime * 0.5f;
             activeSource.volume += Time.deltaTime;
             yield return null;
         }
+        
+
 
         transitioning = false;
     }

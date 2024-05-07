@@ -8,6 +8,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject closeButton;
     public ItemSlot[] itemSlot;
     public ItemSO[] itemSOs;
+    public AudioClip collectSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(string itemName, string itemDesc, Sprite itemSprite) 
     {
+        gameObject.GetComponent<AudioSource>().PlayOneShot(collectSound);
         for (int i = 0; i < itemSlot.Length; i++) {
             if (itemSlot[i].occupied == false) {
                 itemSlot[i].AddItem(itemName, itemDesc, itemSprite);
