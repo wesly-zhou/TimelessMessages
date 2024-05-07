@@ -276,7 +276,7 @@ MonoBehaviour:
   radius: 1.2
   height: 2.2
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 5.8
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -481,6 +481,7 @@ MonoBehaviour:
   isStatic: 0
   isVertical: 0
   animator: {fileID: 7667912130121993075}
+  InitialDirection: 0
 --- !u!58 &2876823167121165607
 CircleCollider2D:
   m_ObjectHideFlags: 0
