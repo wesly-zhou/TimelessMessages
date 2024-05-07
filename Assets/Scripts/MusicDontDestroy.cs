@@ -18,7 +18,7 @@ public class MusicDontDestroy : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
         // subscribe to the scene load callback
-        SceneManager.sceneLoaded += OnSceneLoaded;
+         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
