@@ -13,6 +13,10 @@ public class DoorHandler : MonoBehaviour
     private bool interactable = false;
 
 
+    void Start() {
+        TextBubble.SetActive(false);
+    }
+    
     void Update()
     {
         if (interactable && Input.GetKeyDown(KeyCode.E))
