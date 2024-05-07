@@ -21914,6 +21914,10 @@ PrefabInstance:
       value: Remember the experiments we conducted recently? They might be connected
         to the outbreak.
       objectReference: {fileID: 0}
+    - target: {fileID: 8576206992820323204, guid: 0fe40618ef771b74c91ca02c16054edb, type: 3}
+      propertyPath: itemName
+      value: MessageFour
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
