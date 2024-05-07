@@ -27,7 +27,9 @@ public class GameManager : MonoBehaviour
         {"PuzzleFour", 0},
         {"PuzzleFive", 0},
         {"TestFinalDoor", 0},
-        {"TestFinalRoom", 0}
+        {"TestFinalRoom", 0},
+        {"MeetingRoom", 0}
+        
     };
 
 // ------------------------------- Last Room --------------------------------
