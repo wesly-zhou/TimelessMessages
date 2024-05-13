@@ -20,6 +20,8 @@ public class RoomManager : MonoBehaviour
     public PlayableDirector director;
     public GameObject UIButton;
     public GameObject Player;
+    public Color HighLightColor;
+    
     // Turtorial Text for the monster puzzle
     [SerializeField]
     [TextArea]
@@ -159,11 +161,32 @@ public class RoomManager : MonoBehaviour
         // textBubble.SetActive(true);
         textBubble.GetComponentInChildren<Text>().text = "";
         showNext = false;
+        bool inHighlight = false;
+        String highlightColor = ColorUtility.ToHtmlStringRGB(HighLightColor);
+        string openingTag = $"<color=#{highlightColor}>";
+        string closingTag = "</color>";
         foreach (char letter in sentence.ToCharArray())
         {
-            // If player press E in advance, show the whole sentence
+            // If the text was wraped with '<' and '>', it will be highlighted
+            if (letter == '<')
+            {
+                inHighlight = true;
+                continue;
+            }
+            else if (letter == '>')
+            {
+                inHighlight = false;
+                continue;
+            }
+            if (inHighlight)
+            {
+                textBubble.GetComponentInChildren<Text>().text += openingTag + letter + closingTag;
+            }
+            else
+            {
+                textBubble.GetComponentInChildren<Text>().text += letter;
+            }
             
-            textBubble.GetComponentInChildren<Text>().text += letter;
             yield return new WaitForSeconds(0.05f);
         }
         textBubble.GetComponentInChildren<Image>().enabled = true;
